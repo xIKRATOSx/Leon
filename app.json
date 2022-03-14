@@ -49,7 +49,7 @@
         "OWNER_NUMBER": {
             "description": "Enter the owner number, You must enter your number, Please don't enter the number with country code ( example : 91 for indian ) Also don't enter space & + on the number ( example : 91996132xxxx for indian ). ( This number will be shown on some commands )",
             "required": false,
-            "value": "2349053311892"
+            "value": "919747867484"
         },
         "SEND_READ": {
             "description": "The bot reads the incoming messages ( only commands sent by others so privacy is not breaking there ).",
