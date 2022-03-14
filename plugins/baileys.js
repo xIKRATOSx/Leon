@@ -2,6 +2,8 @@ let {MessageType, GroupSettingChange, ChatModification, WAConnectionTest} = requ
 let Bot = require('../events');
 let fs = require('fs');
 let Config = require('../config');
+let Language = require('../language');
+let Lang = Language.getString('clear');
 let td = Config.WORKTYPE == 'public' ? false : true
 
 var BAILEYS_DESC;
