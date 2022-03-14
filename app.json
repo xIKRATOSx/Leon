@@ -29,7 +29,7 @@
         "HANDLERS": {
             "description": "Symbol used infront of a command ( Prefix ). You can enter 'false' if you want no handler, else if you want multi handler, You can type 'multi'. NOTE : ONLY SYMBOL CAN BE USED, DON'T ENTER ANY OTHER LATIN WORDS / ALPHABETS, IF IT HAPPENS BOT WILL NOT WORK.",
             "required": true,
-            "value": "multi"
+            "value": "^[!.#]"
         },
         "PRIVATE_DELETING_MESSAGE": {
             "description": "if you want to delete the command send by You/User set true else type false.",
