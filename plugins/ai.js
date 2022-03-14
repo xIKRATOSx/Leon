@@ -19,7 +19,7 @@ Bot.addCommand({pattern: 'simi ?(.*)', fromMe: td, desc: Lang.SIMI_DESC}, async 
 
 Bot.addCommand({pattern: 'aco ?(.*)', fromMe: td, desc: Lang.ACO_DESC}, async (message, match) => {
     try {
-      await axios.get(Config.API + '/ai/aco?text=' + match[1] + '&uid=' + message.isGroup ? `${message.data.participant.split('@')[0]}` : `${message.jid.split('@')[0]}` + '&lang=' + Config.LANG).then(async (json) => {
+      await axios.get(Config.API + '/ai/aco?text=' + match[1] + '&id=' + message.isGroup ? `${message.data.participant.split('@')[0]}` : `${message.jid.split('@')[0]}` + '&lang=' + Config.LANG).then(async (json) => {
         await message.sendReply('\n*💬 '+ Lang.BOT_DIVIDER +'* ```' + json.data.response + '```\n');
       });
     } catch (e) {
