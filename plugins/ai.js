@@ -13,7 +13,7 @@ Bot.addCommand({pattern: 'simi ?(.*)', fromMe: td, desc: Lang.SIMI_DESC}, async 
         await message.sendReply('\n*🤖 '+ Lang.BOT_DIVIDER +'* ```' + json.data.response + '```\n');
       });
     } catch (e) {
-      await message.sendReply(Lang.NOT_FOUND_RESPONSE + '\n\n' + e);
+      await message.sendReply(Lang.NOT_FOUND_RESPONSE);
     }
 });
 
@@ -23,6 +23,6 @@ Bot.addCommand({pattern: 'aco ?(.*)', fromMe: td, desc: Lang.ACO_DESC}, async (m
         await message.sendReply('\n*💬 '+ Lang.BOT_DIVIDER +'* ```' + json.data.response + '```\n');
       });
     } catch (e) {
-      await message.sendReply(Lang.NOT_FOUND_RESPONSE + '\n\n' + e);
+      await message.sendReply(Lang.NOT_FOUND_RESPONSE);
     }
 });
