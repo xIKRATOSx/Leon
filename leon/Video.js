@@ -1,4 +1,4 @@
-const {MessageType, Presence, MessageOptions} = require('@adiwajshing/baileys');
+const {MessageType, Presence, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const Base = require('./Base');
 const Message = require('./Message');
 const ReplyMessage = require('./ReplyMessage');

@@ -39,7 +39,7 @@ Bot.addCommand({pattern: 'shutdown', fromMe: true, desc: Lang.SHUTDOWN_DESC}, (a
     });
 }));
 
-Bot.addCommand({pattern: 'editvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}, (async(message, match) => {
+Bot.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}, (async(message, match) => {
 
     if (match[1] === '') return await message.sendReply(Lang.KEY_VAL_MISSING);
 
@@ -56,7 +56,7 @@ Bot.addCommand({pattern: 'editvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC},
     }
 }));
 
-Bot.addCommand({pattern: 'removevar ?(.*)', fromMe: true, desc: Lang.DELVAR_DESC}, (async (message, match) => {
+Bot.addCommand({pattern: 'delvar ?(.*)', fromMe: true, desc: Lang.DELVAR_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendReply(Lang.KEY_VAL_MISSING);
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {

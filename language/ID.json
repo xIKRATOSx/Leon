@@ -1,6 +1,5 @@
 {
-    "__ALEXAJSON__": true,
-    "LANGUAGE": "Indonesia",
+    "LANGUAGE": "Indonesian",
     "LANGCODE": "id",
     "AUTHOR": "TOXIC-DEVIL",
     "STRINGS": {
@@ -136,7 +135,7 @@
             "ALREADY_EMPTY": "```Daftar pengguna Anda sudah kosong!```",
             "NOT_ADDED": "```Anda belum menambahkan pengguna ini!```",
             "SIMI_DESC": "Ngobrol dengan Simi Simi AI Bot.",
-            "VSIMI_DESC": "Ngobrol dengan Simi Simi AI Suara Bot.",
+            "ACO_DESC": "Ngobrol dengan Aco AI Bot.",
             "BOT_DIVIDER": ":",
             "NOT_FOUND_RESPONSE": "```Bot Namun Tidak Ditanggapi!! 😖```",
             "INVALID_REQ": "*Permintaan Tidak Valid.*",
@@ -248,6 +247,12 @@
             "HUMI": "Kelembaban",
             "WIND": "Kecepatan angin",
             "CLOUD": "Awan",
+            "PRESSURE": "Tekanan",
+            "LAT": "Garis Lintang",
+            "LON": "Garis bujur",
+            "SR": "Matahari terbit",
+            "SS": "Matahari terbenam",
+            "TZ": "Zona waktu",
             "NOT_FOUND": "```Saya tidak bisa menemukan kota dengan nama ini. 😖```"
         },
         "web": {
@@ -374,6 +379,9 @@
             "CLR_DESC": "Hapus semua pesan Dari Obrolan.",
             "CLR_PROC": "```Menghapus semua Pesan... 🗑️```",
             "CLR_DONE": "*✅️ Pesan Berhasil Dihapus*.",
+            "BAILEYS_YES": "*✅️ Pesan ini dikirim menggunakan Baileys!*",
+            "BAILEYS_NO": "*❌️ Pesan ini tidak dikirim menggunakan Baileys!*",
+            "NO_REPL": "*😕 Anda harus membalas pesan apa pun!*",
             "ARC_DESC": "Archive obrolan.",
             "ARC_PROC": "```Archiving obrolan... ⬇```",
             "ARC_DONE": "*✅️ Obrolan Berhasil Diarsipkan*.",

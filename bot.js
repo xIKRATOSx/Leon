@@ -8,6 +8,7 @@ const axios = require('axios');
 const Heroku = require('heroku-client');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 const {Message, StringSession, Image, Video} = require('./leon/');
+const { date, time } = require('./helpers/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
@@ -18,7 +19,7 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 
-const LeonDB = config.DATABASE.define('Bot', {
+const LeonDB = config.DATABASE.define('Leon', {
     info: {
       type: DataTypes.STRING,
       allowNull: false
@@ -59,7 +60,9 @@ Array.prototype.remove = function() {
     return this;
 };
 
-async function start() {
+startLeon();
+
+async function startLeon() {
     await config.DATABASE.sync();
     var StrSes_Db = await LeonDB.findAll({
         where: {
@@ -69,7 +72,7 @@ async function start() {
     
     const Leon = new WAConnection();
     const Session = new StringSession();
-    Leon.version = [3, 3430, 9]
+    Leon.version = [3, 3430, 9];
     Leon.setMaxListeners(0);
 
     Leon.logger.level = config.DEBUG ? 'debug' : 'warn';
@@ -156,132 +159,10 @@ ${chalk.green.bold("🔄 Connecting...")}`);
     
     setInterval(async () => { 
         if (config.AUTOBIO == 'true') {
-            if (Leon.user.jid.startsWith('90')) { 
-                var ov_time = new Date().toLocaleString('LK', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('994')) { 
-                var ov_time = new Date().toLocaleString('AZ', { timeZone: 'Asia/Baku' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('94')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('351')) { 
-                var ov_time = new Date().toLocaleString('PT', { timeZone: 'Europe/Lisbon' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('75')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('RU', { timeZone: 'Europe/Kaliningrad' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('91')) { 
-                var ov_time = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('62')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('ID', { timeZone: 'Asia/Jakarta' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('49')) { 
-                var ov_time = new Date().toLocaleString('DE', { timeZone: 'Europe/Berlin' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('61')) {  
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('AU', { timeZone: 'Australia/Lord_Howe' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('55')) { 
-                var ov_time = new Date().toLocaleString('BR', { timeZone: 'America/Noronha' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('33')) {
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('FR', { timeZone: 'Europe/Paris' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('34')) { 
-                var ov_time = new Date().toLocaleString('ES', { timeZone: 'Europe/Madrid' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('44')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('GB', { timeZone: 'Europe/London' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('39')) {  
-                var ov_time = new Date().toLocaleString('IT', { timeZone: 'Europe/Rome' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('7')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('KZ', { timeZone: 'Asia/Almaty' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('998')) {  
-                var ov_time = new Date().toLocaleString('UZ', { timeZone: 'Asia/Samarkand' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else if (Leon.user.jid.startsWith('993')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('TM', { timeZone: 'Asia/Ashgabat' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
-            else {
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('EN', { timeZone: 'America/New_York' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By Leon'
-                await Leon.setStatus(biography)
-            }
+            var timezone_bio = await time(Leon.user.jid)
+            var date_bio = await date()
+            const biography = '📅 ' + date_bio + '\n⌚ ' + timezone_bio
+            await Leon.setStatus(biography)
         }
     }, 7890);
     
@@ -299,10 +180,10 @@ ${chalk.green.bold("🔄 Connecting...")}`);
                   try { pp = await Leon.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await Leon.getProfilePicture(); }
                    var json = await Leon.groupMetadata(msg.key.remoteJid)
                    await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
-                   await Leon.sendMessage(msg.key.remoteJid, res.data, MessageType.image, { mimetype: Mimetype.png, caption:  gb.message.replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name) }); });   
+                   await Leon.sendMessage(msg.key.remoteJid, res.data, MessageType.image, { mimetype: Mimetype.png, caption:  gb.message.replace('@user', '@' + msg.messageStubParameters[0].split('@')[0]).replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name) }); });   
                 } else {
                    var json = await Leon.groupMetadata(msg.key.remoteJid)
-                   await Leon.sendMessage(msg.key.remoteJid, gb.message.replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name), MessageType.text);   
+                   await Leon.sendMessage(msg.key.remoteJid, gb.message.replace('@user', '@' + msg.messageStubParameters[0].split('@')[0]).replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name), MessageType.text);   
             }
           }  
             return;
@@ -315,10 +196,10 @@ ${chalk.green.bold("🔄 Connecting...")}`);
                   try { pp = await Leon.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await Leon.getProfilePicture(); }
                    var json = await Leon.groupMetadata(msg.key.remoteJid)
                    await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
-                   await Leon.sendMessage(msg.key.remoteJid, res.data, MessageType.image, { mimetype: Mimetype.png, caption:  gb.message.replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name) }); });   
+                   await Leon.sendMessage(msg.key.remoteJid, res.data, MessageType.image, { mimetype: Mimetype.png, caption:  gb.message.replace('@user', '@' + msg.messageStubParameters[0].split('@')[0]).replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name) }); });   
                 } else {
                    var json = await Leon.groupMetadata(msg.key.remoteJid)
-                   await Leon.sendMessage(msg.key.remoteJid, gb.message.replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name), MessageType.text);   
+                   await Leon.sendMessage(msg.key.remoteJid, gb.message.replace('@user', '@' + msg.messageStubParameters[0].split('@')[0]).replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name), MessageType.text);   
             }
           }         
             return;                               
@@ -369,7 +250,7 @@ ${chalk.green.bold("🔄 Connecting...")}`);
                         }
                         
                         var match = text_msg.match(command.pattern);
-                        
+
                         if (command.on !== undefined && (command.on === 'image' || command.on === 'photo' )
                         && msg.message.imageMessage !== null) {
                             whats = new Image(Leon, msg);
@@ -389,7 +270,7 @@ ${chalk.green.bold("🔄 Connecting...")}`);
                         }
                         catch (error) {
 
-                            var errorMsg = { en: "%0A%2A%E3%80%8E%20ERROR%20%E3%80%8F%2A%0A%0A%2ALeon%20an%20error%20has%20occurred%21%2A%0A%0A%2AError:%2A%20%60%60%60", ml: "%0A%2A%E3%80%8E%20%E0%B4%AA%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B5%8D%20%E3%80%8F%2A%0A%0A%2ALeon%20%E0%B4%AA%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B5%8D%20%E0%B4%B8%E0%B4%82%E0%B4%AD%E0%B4%B5%E0%B4%BF%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B5%81%21%2A%0A%0A%2A%E0%B4%AA%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B5%8D%3A%2A%20%60%60%60%0A", id: "%0A%2A%E3%80%8E%20KESALAHAN%20%E3%80%8F%2A%0A%0A%2ALeon%20telah%20terjadi%20kesalahan%21%2A%0A%0A%2AKesalahan%3A%2A%20%60%60%60%0A" }
+                            var errorMsg = { en: "%0A%2A%E3%80%8E%20ERROR%20%E3%80%8F%2A%0A%0A%2ALeon%20an%20error%20has%20occurred%21%2A%0A%0A%2AError:%2A%20%60%60%60", ml: "%0A%2A%E3%80%8E%20%E0%B4%AA%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B5%8D%20%E3%80%8F%2A%0A%0A%2ALeon%20%E0%B4%AA%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B5%8D%20%E0%B4%B8%E0%B4%82%E0%B4%AD%E0%B4%B5%E0%B4%BF%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B5%81%21%2A%0A%0A%2A%E0%B4%AA%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B5%8D:%2A%20%60%60%60%0A", id: "%0A%2A%E3%80%8E%20KESALAHAN%20%E3%80%8F%2A%0A%0A%2ALeon%20telah%20terjadi%20kesalahan%21%2A%0A%0A%2AKesalahan:%2A%20%60%60%60%0A" }
 
                             if (config.LANG == 'EN') {
                                 await Leon.sendMessage(Leon.user.jid, decodeURI(errorMsg.en) + error + '```\n\n', MessageType.text);
@@ -421,5 +302,3 @@ ${chalk.green.bold("🔄 Connecting...")}`);
         }
     }
 }
-
-start();
