@@ -13,6 +13,5 @@ if (Config.LANG == 'ID') BAILEYS_DESC = "Memeriksa apakah pesan dikirim oleh bot
 
 Bot.addCommand({pattern: 'baileys', fromMe: td, desc: BAILEYS_DESC}, (async (message, match) => {
 
-var _0x9073=["\x72\x65\x70\x6C\x79\x5F\x6D\x65\x73\x73\x61\x67\x65","\x74\x65\x78\x74","\x73\x65\x6E\x64\x52\x65\x70\x6C\x79"];if(!message[_0x9073[0]]||  !message[_0x9073[0]][_0x9073[1]]){return  await message[_0x9073[2]](Lang.NO_REPL)};let {isBaileys}=message[_0x9073[0]][_0x9073[1]];if(!isBaileys){return  await message[_0x9073[2]](Lang.BAILEYS_NO)}else {return  await message[_0x9073[2]](Lang.BAILEYS_YES)}
-
+var _0x945b=["\x74\x65\x78\x74","\x72\x65\x70\x6C\x79\x5F\x6D\x65\x73\x73\x61\x67\x65","\x73\x65\x6E\x64\x52\x65\x70\x6C\x79"];if(message[_0x945b[1]][_0x945b[0]]){var {isBaileys}=message[_0x945b[1]][_0x945b[0]];if(!isBaileys){ await message[_0x945b[2]](Lang.BAILEYS_NO)}else { await message[_0x945b[2]](Lang.BAILEYS_YES)}}else { await message[_0x945b[2]](Lang.NO_REPL)}
 }));
