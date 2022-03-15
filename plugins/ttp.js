@@ -28,12 +28,12 @@ Bot.addCommand({ pattern: 'attp ?(.*)', fromMe: td, desc: Lang.ATTP_DESC }, (asy
       var text = match[1]
       var uri = encodeURI(text)
       var ttinullimage = await axios.get('https://api.xteam.xyz/attp?file&text=' + uri, { responseType: 'arraybuffer' })
-      await message.sendSticker(Buffer.from(ttinullimage.data));
+      await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
     } else {
       if (message.reply_message === false) return await message.sendReply(Lang.NEED_WORD);
       var uri = encodeURI(message.reply_message.text)
       var ttinullimage = await axios.get('https://api.xteam.xyz/attp?file&text=' + uri, { responseType: 'arraybuffer' })
-      await message.sendSticker(Buffer.from(ttinullimage.data));
+      await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
     }
 }));
 
