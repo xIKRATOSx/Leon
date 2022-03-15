@@ -9,12 +9,32 @@ let Lang = Language.getString('ttp');
 
 Bot.addCommand({ pattern: 'ttp ?(.*)', fromMe: td, desc: Lang.TTP_DESC }, (async (message, match) => {
 
-var _0x5535e9=_0x46a1;function _0x46a1(_0xde7af,_0xf7691b){var _0x5ddd14=_0x5ddd();return _0x46a1=function(_0x46a102,_0x3101c1){_0x46a102=_0x46a102-0xfd;var _0x37afc7=_0x5ddd14[_0x46a102];return _0x37afc7;},_0x46a1(_0xde7af,_0xf7691b);}function _0x5ddd(){var _0x2120e8=['2lJwJpk','text','data','975480FxcVUP','https://api.xteam.xyz/ttp?file&text=','arraybuffer','4332924GatzxX','8333290yCLfEI','34612760zwhiDZ','from','get','sendReply','7945470mctYlO','sendImage','11209429CNFFki','reply_message','774297aKUAxC'];_0x5ddd=function(){return _0x2120e8;};return _0x5ddd();}(function(_0x4114dd,_0xfc6d8){var _0x3628c6=_0x46a1,_0xd6aa83=_0x4114dd();while(!![]){try{var _0x1445c6=parseInt(_0x3628c6(0x10d))/0x1*(-parseInt(_0x3628c6(0xfd))/0x2)+-parseInt(_0x3628c6(0x103))/0x3+parseInt(_0x3628c6(0x100))/0x4+-parseInt(_0x3628c6(0x104))/0x5+-parseInt(_0x3628c6(0x109))/0x6+parseInt(_0x3628c6(0x10b))/0x7+parseInt(_0x3628c6(0x105))/0x8;if(_0x1445c6===_0xfc6d8)break;else _0xd6aa83['push'](_0xd6aa83['shift']());}catch(_0x3d4309){_0xd6aa83['push'](_0xd6aa83['shift']());}}}(_0x5ddd,0xeaf00));if(match[0x1]!==''){var uri=encodeURI(match[0x1]),ttinullimage=await axios[_0x5535e9(0x107)](_0x5535e9(0x101)+uri,{'responseType':'arraybuffer'});await message[_0x5535e9(0x10a)](Buffer[_0x5535e9(0x106)](ttinullimage['data']));}else{if(message['reply_message']){var txt=message[_0x5535e9(0x10c)][_0x5535e9(0xfe)],uri=encodeURI(txt),ttinullimage=await axios['get']('https://api.xteam.xyz/ttp?file&text='+uri,{'responseType':_0x5535e9(0x102)});await message[_0x5535e9(0x10a)](Buffer['from'](ttinullimage[_0x5535e9(0xff)]));}else!message[_0x5535e9(0x10c)]&&match[0x1]===''&&await message[_0x5535e9(0x108)](Lang['NEED_WORD']);}   
+    if (match[1] !== '') {
+      var text = match[1]
+      var uri = encodeURI(text)
+      var ttinullimage = await axios.get('https://api.xteam.xyz/ttp?file&text=' + uri, { responseType: 'arraybuffer' })
+      await message.sendSticker(Buffer.from(ttinullimage.data));
+    } else {
+      if (message.reply_message === false) return await message.sendReply(Lang.NEED_WORD);
+      var uri = encodeURI(message.reply_message.text)
+      var ttinullimage = await axios.get('https://api.xteam.xyz/ttp?file&text=' + uri, { responseType: 'arraybuffer' })
+      await message.sendSticker(Buffer.from(ttinullimage.data));
+    }
 }));
 
 Bot.addCommand({ pattern: 'attp ?(.*)', fromMe: td, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
-var _0x5713e0=_0x3b0e;(function(_0x242f3f,_0x30a19a){var _0x4cf773=_0x3b0e,_0x20ca62=_0x242f3f();while(!![]){try{var _0x5db12f=-parseInt(_0x4cf773(0xd4))/0x1+parseInt(_0x4cf773(0xd9))/0x2+parseInt(_0x4cf773(0xe3))/0x3+-parseInt(_0x4cf773(0xdb))/0x4+-parseInt(_0x4cf773(0xd6))/0x5*(parseInt(_0x4cf773(0xd8))/0x6)+parseInt(_0x4cf773(0xd5))/0x7+parseInt(_0x4cf773(0xda))/0x8;if(_0x5db12f===_0x30a19a)break;else _0x20ca62['push'](_0x20ca62['shift']());}catch(_0x4892ac){_0x20ca62['push'](_0x20ca62['shift']());}}}(_0x2114,0x86dcd));if(match[0x1]!==''){var uri=encodeURI(match[0x1]),ttinullimage=await axios['get'](_0x5713e0(0xdd)+uri,{'responseType':_0x5713e0(0xd7)});await message[_0x5713e0(0xe2)](Buffer[_0x5713e0(0xde)](ttinullimage[_0x5713e0(0xe0)]));}else{if(message['reply_message']){var txt=message[_0x5713e0(0xdf)]['text'],uri=encodeURI(txt),ttinullimage=await axios[_0x5713e0(0xe1)](_0x5713e0(0xdd)+uri,{'responseType':_0x5713e0(0xd7)});await message[_0x5713e0(0xe2)](Buffer[_0x5713e0(0xde)](ttinullimage[_0x5713e0(0xe0)]));}else!message[_0x5713e0(0xdf)]&&match[0x1]===''&&await message[_0x5713e0(0xe4)](Lang[_0x5713e0(0xdc)]);}function _0x3b0e(_0x355f7a,_0x450d3a){var _0x2114cb=_0x2114();return _0x3b0e=function(_0x3b0e3f,_0x2b76ac){_0x3b0e3f=_0x3b0e3f-0xd4;var _0x55b65b=_0x2114cb[_0x3b0e3f];return _0x55b65b;},_0x3b0e(_0x355f7a,_0x450d3a);}function _0x2114(){var _0x432e16=['3044184vTDGPl','sendReply','994616zheDXt','1557374MihAYS','1288545ZzcKFy','arraybuffer','18XqCQXt','252464vBWeyI','15443136rrSEVC','3894776VxNyeN','NEED_WORD','https://api.xteam.xyz/attp?file&text=','from','reply_message','data','get','sendVideoAsGif'];_0x2114=function(){return _0x432e16;};return _0x2114();}
+    if (match[1] !== '') {
+      var text = match[1]
+      var uri = encodeURI(text)
+      var ttinullimage = await axios.get('https://api.xteam.xyz/attp?file&text=' + uri, { responseType: 'arraybuffer' })
+      await message.sendSticker(Buffer.from(ttinullimage.data));
+    } else {
+      if (message.reply_message === false) return await message.sendReply(Lang.NEED_WORD);
+      var uri = encodeURI(message.reply_message.text)
+      var ttinullimage = await axios.get('https://api.xteam.xyz/attp?file&text=' + uri, { responseType: 'arraybuffer' })
+      await message.sendSticker(Buffer.from(ttinullimage.data));
+    }
 }));
     
 Bot.addCommand({pattern: 'emoji ?(.*)', fromMe: td, desc: Lang.EMOJI_DESC}, (async (message, match) => {
