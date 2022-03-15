@@ -3,6 +3,7 @@ let {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 let {spawnSync} = require('child_process');
 let Config = require('../config');
 let chalk = require('chalk');
+let PD = require('./sql/plugin');
 let fs = require('fs');
 let axios = require('axios');
 let Language = require('../language');
