@@ -270,15 +270,18 @@ ${chalk.green.bold("🔄 Connecting...")}`);
                         }
                         catch (error) {
 
-                            var errorMsg = { en: "%0A%2A%E3%80%8E%20ERROR%20%E3%80%8F%2A%0A%0A%2ALeon%20an%20error%20has%20occurred%21%2A%0A%0A%2AError:%2A%20%60%60%60", ml: "%0A%2A%E3%80%8E%20%E0%B4%AA%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B5%8D%20%E3%80%8F%2A%0A%0A%2ALeon%20%E0%B4%AA%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B5%8D%20%E0%B4%B8%E0%B4%82%E0%B4%AD%E0%B4%B5%E0%B4%BF%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B5%81%21%2A%0A%0A%2A%E0%B4%AA%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B5%8D:%2A%20%60%60%60%0A", id: "%0A%2A%E3%80%8E%20KESALAHAN%20%E3%80%8F%2A%0A%0A%2ALeon%20telah%20terjadi%20kesalahan%21%2A%0A%0A%2AKesalahan:%2A%20%60%60%60%0A" }
+                            var errorMsg = { en: "%0A%2A%E3%80%8E%20ERROR%20%E3%80%8F%2A%0A%0A%2ALeon%20an%20error%20has%20occurred%21%2A%0A%0A%2AError:%2A%20%60%60%60", ml: "%0A%2A%E3%80%8E%20%E0%B4%AA%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B5%8D%20%E3%80%8F%2A%0A%0A%2ALeon%20%E0%B4%AA%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B5%8D%20%E0%B4%B8%E0%B4%82%E0%B4%AD%E0%B4%B5%E0%B4%BF%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B5%81%21%2A%0A%0A%2A%E0%B4%AA%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B5%8D:%2A%20%60%60%60%0A", id: "%0A%2A%E3%80%8E%20KESALAHAN%20%E3%80%8F%2A%0A%0A%2ALeon%20telah%20terjadi%20kesalahan%21%2A%0A%0A%2AKesalahan:%2A%20%60%60%60%0A", msgEn: "%60%60%60%E2%9A%A0%EF%B8%8F%20An%20error%20occurred!%20%E2%9A%A0%EF%B8%8F%60%60%60%0A*%F0%9F%98%96%20Please%20try%20again%20later.*", msgMl: "%60%60%60%E2%9A%A0%EF%B8%8F%20%E0%B4%92%E0%B4%B0%E0%B5%81%20%E0%B4%AA%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B5%8D%20%E0%B4%B8%E0%B4%82%E0%B4%AD%E0%B4%B5%E0%B4%BF%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B5%81%20%E2%9A%A0%EF%B8%8F%60%60%60%0A*%E0%B4%A6%E0%B4%AF%E0%B4%B5%E0%B4%BE%E0%B4%AF%E0%B4%BF%20%E0%B4%AA%E0%B4%BF%E0%B4%A8%E0%B5%8D%E0%B4%A8%E0%B5%80%E0%B4%9F%E0%B5%8D%20%E0%B4%B5%E0%B5%80%E0%B4%A3%E0%B5%8D%E0%B4%9F%E0%B5%81%E0%B4%82%20%E0%B4%B6%E0%B5%8D%E0%B4%B0%E0%B4%AE%E0%B4%BF%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B5%81%E0%B4%95.*", MsgId: "%60%60%60%E2%9A%A0%EF%B8%8F%20Terjadi%20kesalahan!%20%E2%9A%A0%EF%B8%8F%60%60%60%0A*Silakan%20coba%20lagi%20nanti.*" }
 
                             if (config.LANG == 'EN') {
+                                await Leon.sendMessage(msg.key.remoteJid, decodeURI(errorMsg.msgEn), MessageType.text);
                                 await Leon.sendMessage(Leon.user.jid, decodeURI(errorMsg.en) + error + '```\n\n', MessageType.text);
                                 
                             } else if (config.LANG == 'ML') {
+                                await Leon.sendMessage(msg.key.remoteJid, decodeURI(errorMsg.msgMl), MessageType.text);
                                 await Leon.sendMessage(Leon.user.jid, decodeURI(errorMsg.ml) + error + '```\n\n', MessageType.text);
                                 
                             } else {
+                                await Leon.sendMessage(msg.key.remoteJid, decodeURI(errorMsg.msgId), MessageType.text);
                                 await Leon.sendMessage(Leon.user.jid, decodeURI(errorMsg.id) + error + '```\n\n', MessageType.text);
                             }
                         }
