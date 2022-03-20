@@ -6,7 +6,7 @@ let got = require('got');
 let td = Config.WORKTYPE == 'private' ? true : false
 
 var LYRICS_DESC = "Searches for the music lyrics from name."
-var NEED_LYRIC = "*You must enter a music name!*"
+var NEED_LYRICS = "*You must enter a music name!*"
 var SEARCHING_LYRICS = "```🔍 Searching for your lyrics...```"
 var COULDNT_FIND = "*Cannot find any lyrics!*"
 
