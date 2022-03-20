@@ -157,7 +157,7 @@ ${chalk.green.bold("🔄 Connecting...")}`);
     });
     
     setInterval(async () => { 
-        if (Config.AUTOBIO == 'true') {
+        if (config.AUTOBIO == 'true') {
             if (conn.user.jid.startsWith('90')) { // Turkey
                 var ov_time = new Date().toLocaleString('LK', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
