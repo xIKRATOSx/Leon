@@ -26,7 +26,7 @@ if (Config.WORKTYPE == 'private') {
             .format('mp3')
             .save('output.mp3')
             .on('end', async () => {
-                await message.sendAudio(fs.readFileSync('output.mp3'));
+                await message.sendAudioAsVoice(fs.readFileSync('output.mp3'));
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -70,7 +70,7 @@ else if (Config.WORKTYPE == 'public') {
             .format('mp3')
             .save('output.mp3')
             .on('end', async () => {
-                await message.sendAudio(fs.readFileSync('output.mp3'));
+                await message.sendAudioAsVoice(fs.readFileSync('output.mp3'));
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
