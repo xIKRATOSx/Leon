@@ -24,7 +24,7 @@ Bot.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC}, (asy
             }
         );
         
-        await message.sendReply(degisiklikler);
+        await message.sendReply(degisiklikler + "```");
     }
 }));
 
