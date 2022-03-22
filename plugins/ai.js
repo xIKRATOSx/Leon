@@ -2,6 +2,7 @@ let Bot = require('../events');
 let {MessageType} = require('@adiwajshing/baileys');
 let fs = require('fs');
 let axios = require('axios');
+let PD = require('./sql/plugin');
 let Config = require('../config');
 let td = Config.WORKTYPE == 'public' ? false : true
 let Language = require('../language');
