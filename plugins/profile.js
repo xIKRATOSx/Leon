@@ -2,6 +2,7 @@ let Bot = require('../events');
 let {MessageType} = require('@adiwajshing/baileys');
 let Config = require('../config');
 let fs = require('fs');
+let axios = require('axios');
 let Language = require('../language');
 let Lang = Language.getString('profile');
 
