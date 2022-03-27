@@ -22,7 +22,7 @@ Bot.addCommand({pattern: 'truth ?(.*)', fromMe: true, desc: TRUTH_DESC}, (async 
   return await message.sendImage(Buffer.from(img.data), `${"```" + truth + "```"}\n\n*Powered by TOXIC DEVIL API*`);
 }));
 
-Bot.addCommand({pattern: 'dare ?(.*)', fromMe: true}, (async (message, match) => {
+Bot.addCommand({pattern: 'dare ?(.*)', fromMe: true, desc: DARE_DESC}, (async (message, match) => {
 
   let url = Config.API + '/truth-or-dare/dare?lang=' + Config.LANG
   let res = await got(url);
