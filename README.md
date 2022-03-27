@@ -102,7 +102,6 @@ node index.js
 | PING           | Speed/Ping test                                                   | ✅️     |
 | SHORT          | Shorten long url with tinyurl.com                                 | ❌️     |
 | WHOIS          | Chat information                                                  | ✅️     |
-| -------------- | ----------------------------------------------------------------- | ------ |
 
 <p>
 </details>
