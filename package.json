@@ -1,6 +1,6 @@
 {
   "name": "Leon",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A Simple WhatsApp Bot.",
   "main": "./Leon/bot.js",
   "scripts": {
