@@ -19,10 +19,10 @@ Bot.addCommand({pattern: 'truth ?(.*)', fromMe: true, desc: TRUTH_DESC}, (async 
   var img = ["https://i.ibb.co/w4PCg7H/62396edecb66b.jpg","https://i.ibb.co/D5Zqsdz/62396f3e2540d.jpg","https://i.ibb.co/YPWYLps/62396f848328f.jpg"]
   img = img[Math.floor(Math.random() * img.length)];
   img = await axios.get(img, { responseType: 'arraybuffer' })
-  return await message.sendImage(Buffer.from(img.data), `${"```" + truth + "```"}\n\n*Powered by TOXIC DEVIL API*`);
+  return await message.sendImage(Buffer.from(img.data), `${"```" + truth + "```"}`);
 }));
 
-Bot.addCommand({pattern: 'dare ?(.*)', fromMe: true}, (async (message, match) => {
+Bot.addCommand({pattern: 'dare ?(.*)', fromMe: true, desc: DARE_DESC}, (async (message, match) => {
 
   let url = Config.API + '/truth-or-dare/dare?lang=' + Config.LANG
   let res = await got(url);
@@ -31,5 +31,5 @@ Bot.addCommand({pattern: 'dare ?(.*)', fromMe: true}, (async (message, match) =>
   var img = ["https://i.ibb.co/qnGhRvg/62396efd0874d.jpg","https://i.ibb.co/zQTPqVd/62396f588ee20.jpg","https://i.ibb.co/19YTTQc/62396fa12079a.jpg"]
   img = img[Math.floor(Math.random() * img.length)];
   img = await axios.get(img, { responseType: 'arraybuffer' })
-  return await message.sendImage(Buffer.from(img.data), `${"```" + dare + "```"}\n\n*Powered by TOXIC DEVIL API*`);
+  return await message.sendImage(Buffer.from(img.data), `${"```" + dare + "```"}`);
 }));

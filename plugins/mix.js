@@ -14,12 +14,5 @@ if (Config.LANG == 'ID') MIX_DESC = "Mencampur sepasang emoji ke gambar.", NEED_
 
 Bot.addCommand({pattern: 'mix ?(.*)', fromMe: true, desc: MIX_DESC}, (async (message, match) => {
 
-  if (match[1] === '') return await message.sendReply(NEED_EMO);
-  let url = Config.API + '/emoji-mix?emoji=' + match[1]
-  let res = await got(url);
-  let json = JSON.parse(res.body);
-  if (json.message.includes('any')) return await message.sendReply(NEED_TWO);
-  if (json.message.includes('Emoji')) return await message.sendReply(NOT_SUP);
-  var img = await axios.get(json.result, { responseType: 'arraybuffer' })
-  return await message.sendImage(Buffer.from(img.data), "*Powered by TOXIC DEVIL API*");
+const _0x38048c=_0x9700;(function(_0x30b4da,_0x4fda2e){const _0xfee3ea=_0x9700,_0x5dc653=_0x30b4da();while(!![]){try{const _0x5e4050=-parseInt(_0xfee3ea(0x1d7))/0x1*(-parseInt(_0xfee3ea(0x1e3))/0x2)+-parseInt(_0xfee3ea(0x1e1))/0x3*(parseInt(_0xfee3ea(0x1ec))/0x4)+parseInt(_0xfee3ea(0x1da))/0x5+parseInt(_0xfee3ea(0x1e8))/0x6*(-parseInt(_0xfee3ea(0x1e0))/0x7)+parseInt(_0xfee3ea(0x1e5))/0x8*(parseInt(_0xfee3ea(0x1ea))/0x9)+parseInt(_0xfee3ea(0x1db))/0xa*(-parseInt(_0xfee3ea(0x1de))/0xb)+-parseInt(_0xfee3ea(0x1d5))/0xc;if(_0x5e4050===_0x4fda2e)break;else _0x5dc653['push'](_0x5dc653['shift']());}catch(_0x47e6a7){_0x5dc653['push'](_0x5dc653['shift']());}}}(_0x3634,0xda921));function _0x3634(){const _0x5e0fdb=['1933590BtDzzC','body','parse','33tfGAhk','result','707RFsFRp','3Giczth','API','2JpiNcC','Emoji','16fcNTVH','arraybuffer','any','87972MlYQaK','from','6505443ANuAdR','includes','4121828MrqSup','947736RnPXpm','sendReply','1314011KZejvW','message','data','6529870FuuEkm'];_0x3634=function(){return _0x5e0fdb;};return _0x3634();}function _0x9700(_0x42b34e,_0x4fcbca){const _0x363479=_0x3634();return _0x9700=function(_0x9700e,_0x10f43e){_0x9700e=_0x9700e-0x1d5;let _0x4647f8=_0x363479[_0x9700e];return _0x4647f8;},_0x9700(_0x42b34e,_0x4fcbca);}if(match[0x1]==='')return await message[_0x38048c(0x1d6)](NEED_EMO);let url=Config[_0x38048c(0x1e2)]+'/emoji-mix?emoji='+match[0x1],res=await got(url),json=JSON[_0x38048c(0x1dd)](res[_0x38048c(0x1dc)]);if(json[_0x38048c(0x1d8)][_0x38048c(0x1eb)](_0x38048c(0x1e7)))return await message[_0x38048c(0x1d6)](NEED_TWO);if(json[_0x38048c(0x1d8)][_0x38048c(0x1eb)](_0x38048c(0x1e4)))return await message[_0x38048c(0x1d6)](NOT_SUP);var img=await axios['get'](json[_0x38048c(0x1df)],{'responseType':_0x38048c(0x1e6)});return await message['sendImage'](Buffer[_0x38048c(0x1e9)](img[_0x38048c(0x1d9)]),'');
 }));

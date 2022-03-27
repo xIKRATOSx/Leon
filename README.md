@@ -19,6 +19,13 @@ node index.js
 
 [![Deploy-Leon](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TOXIC-DEVIL/Leon)
 
+**Found a bug/glitch is bot? Or wanna feedback us? [`Mail Us Here!`](mailto:leon.toxicdevil@gmail.com)**
+
+## ✨️ Events
+
+- **🎉 Good news for instagram addicts!! 😍 Here is your most awaited Instagram Commands ( Instagram post downloader, Instagram story downloader and instagram profile. ) ⏱️ which is only for limited days ( 01/04/2022 ). Wanna need permanently? Feedback about this command 🙃**
+- **🪄🎩 Let's disappear messages with a new command! 😉 ephmeral command is now available! 🥳**
+
 ## ⚠ Warning ⚠
 
 ```
@@ -35,7 +42,7 @@ No personal support will be provided / We won't spoon feed you.
 If you need help
 you can contact - 
 ```
-[TOXIC DEVIL](https://wa.me/919747867484?text=I%20Have%20Seen%20Your%20Leon%20Ropo%20😍%20I%20Got%20Your%20Number%20From%20GitHub%20😉)
+[`MAIL LEON`](mailto:leon.toxicdevil@gmail.com)
 
 ## 👨‍💻 Developers & Contributors 👨‍💻
 
