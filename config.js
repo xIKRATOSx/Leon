@@ -13,6 +13,8 @@ module.exports = {
     VERSION: 'V2',
     SESSION: process.env.LEON_SESSION === undefined ? '' : process.env.LEON_SESSION,
     ANTILINK: process.env.ANTI_LINK === undefined ? 'false' : process.env.ANTI_LINK,
+    AUTOINSTALL: process.env.AUTO_INSTALL === undefined ? 'true' : process.env.AUTO_INSTALL,
+    ANTIEMO: process.env.ANTI_EMOJI === undefined ? 'false' : process.env.ANTI_EMOJI,
     AUTOBIO: process.env.AUTO_BIO === undefined ? 'false' : process.env.AUTO_BIO,
     OWNER: process.env.OWNER_NAME === undefined ? 'TOXIC DEVIL' : process.env.OWNER_NAME,
     OWNERNUM: process.env.OWNER_NUMBER === undefined ? '0' : process.env.OWNER_NUMBER,
