@@ -21,11 +21,6 @@ node index.js
 
 **Found a bug/glitch is bot? Or wanna feedback us? [`Mail Us Here!`](mailto:leon.toxicdevil@gmail.com)**
 
-## ✨️ Events
-
-- **🎉 Good news for instagram addicts!! 😍 Here is your most awaited Instagram Commands ( Instagram post downloader, Instagram story downloader and instagram profile. ) ⏱️ which is only for limited days ( 01/04/2022 ). Wanna need permanently? Feedback about this command 🙃**
-- **🪄🎩 Let's disappear messages with a new command! 😉 ephmeral command is now available! 🥳**
-
 ## ⚠ Warning ⚠
 
 ```
