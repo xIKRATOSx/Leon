@@ -26,12 +26,12 @@ Bot.addCommand({ pattern: 'ttp ?(.*)', fromMe: td, desc: Lang.TTP_DESC }, (async
       var text = match[1]
       var uri = encodeURI(text)
       var ttinullimage = await axios.get('https://api.xteam.xyz/ttp?file&text=' + uri, { responseType: 'arraybuffer' })
-      await message.sendImage(Buffer.from(ttinullimage.data), "*Made by Leon*");
+      await message.sendImage(Buffer.from(ttinullimage.data), "");
     } else {
       if (message.reply_message === false) return await message.sendReply(Lang.NEED_WORD);
       var uri = encodeURI(message.reply_message.text)
       var ttinullimage = await axios.get('https://api.xteam.xyz/ttp?file&text=' + uri, { responseType: 'arraybuffer' })
-      await message.sendImage(Buffer.from(ttinullimage.data), "*Made by Leon*");
+      await message.sendImage(Buffer.from(ttinullimage.data), "");
     }
 }));
 
