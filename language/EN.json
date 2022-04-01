@@ -78,9 +78,9 @@
             "FRM": "From:"
         },
         "heroku": {
-            "RESTART_DESC": "Restart Bot",
+            "RESTART_DESC": "Restart/Reboot Bot.",
             "RESTART_MSG": "```🔁 Restarting...```",
-            "SHUTDOWN_DESC": "Shutdown Bot",
+            "SHUTDOWN_DESC": "Shutdown/Turn off Bot.",
             "SHUTDOWN_MSG": "```Shutting down ⛔```",
             "DYNO_DESC": "Check heroku dyno usage",
             "DYNO_TOTAL": "```Total Quota```",
@@ -88,13 +88,14 @@
             "PERCENTAGE": "```Percentage```",
             "DYNO_LEFT": "```Remaining```",
             "SETVAR_DESC": "Set heroku config var",
-            "SET_SUCCESS": "Successfully set ```{} ➜ {}```",
-            "KEY_VAL_MISSING": "```Either Key or Value is missing```",
-            "INVALID": "```Invalid key:value format```",
+            "SET_SUCCESS": "```✅️ Successfully set``` *{} ➜ {}*",
+            "KEY_VAL_MISSING": "*You must enter the key and value by splitting with : symbol!*",
+            "INVALID": "```❌️ Couldn't find any key! Please enter a valid key and value.```",
             "GETVAR_DESC": "Get heroku config var",
             "DELVAR_DESC": "Delete heroku config var",
-            "DEL_SUCCESS": "```{} successfully deleted```",
-            "NOT_FOUND": "```no results found for this key```"           
+            "ALLVAR_DESC": "Get all heroku config vars",
+            "DEL_SUCCESS": "```☑️ Successfully deleted``` *{}*",
+            "NOT_FOUND": "```❌️ Couldn't find any key! Please enter a valid key to get value.```"           
         },
         "filters": {
             "FILTER_DESC": "It adds a filter. If someone writes your filter, it send the answer. If you just write .filter, it show's your filter list.",
