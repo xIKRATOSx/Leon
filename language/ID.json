@@ -93,6 +93,7 @@
             "INVALID": "```Kunci tidak valid: format nilai```",
             "GETVAR_DESC": "Dapatkan heroku config var",
             "DELVAR_DESC": "menghapus heroku config var",
+            "ALLVAR_DESC": "Dapatkan semua vars konfigurasi heroku",
             "DEL_SUCCESS": "```{} berhasil dihapus```",
             "NOT_FOUND": "```tidak ada hasil yang ditemukan untuk kunci ini```",
             "SUCC": "*Berhasil Mengatur ✅* \n*Mohon tunggu sebentar.*",

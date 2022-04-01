@@ -91,6 +91,17 @@ Bot.addCommand({pattern: 'getvar ?(.*)', fromMe: true, desc: Lang.GETVAR_DESC}, 
     });
 }));
 
+Bot.addCommand({pattern: 'allvar ?(.*)', fromMe: true, desc: Lang.ALLVAR_DESC}, (async (message, match) => {
+
+      var vars = ''
+      await heroku.get(baseURI + "/config-vars").then(async (keys) => {
+          for (let key in keys) {
+            vars += '_➥ ' + key + '_ : *' + keys[key] + '*\n\n'
+          }
+      });
+    await message.sendReply(vars);
+}));
+
 if (Config.WORKTYPE == 'private') {
 
     Bot.addCommand({pattern: 'dyno', fromMe: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
