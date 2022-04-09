@@ -388,7 +388,8 @@ ${chalk.green.bold("🔄 Connecting...")}`);
                             await command.function(whats, match);
                         }
                         catch (error) {
-                          await getErrorMessage(config.LANG, error, config.ERROR_ANALYZER);
+                          let error_report = await getErrorMessage(config.LANG, error, config.ERROR_ANALYZER);
+                          await Leon.sendMessage(Leon.user.jid, error_report, MessageType.text);
                         }
                     }
                 }
