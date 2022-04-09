@@ -25,12 +25,12 @@ Bot.addCommand({ pattern: 'ttp ?(.*)', fromMe: td, desc: Lang.TTP_DESC }, (async
     if (match[1] !== '') {
       var text = match[1]
       var uri = encodeURI(text)
-      var ttinullimage = await axios.get('https://api.xteam.xyz/ttp?file&text=' + uri, { responseType: 'arraybuffer' })
+      var ttinullimage = await axios.get(Config.API + '/creator/ttp?text=' + uri, { responseType: 'arraybuffer' })
       await message.sendImage(Buffer.from(ttinullimage.data), "");
     } else {
       if (message.reply_message === false) return await message.sendReply(Lang.NEED_WORD);
       var uri = encodeURI(message.reply_message.text)
-      var ttinullimage = await axios.get('https://api.xteam.xyz/ttp?file&text=' + uri, { responseType: 'arraybuffer' })
+      var ttinullimage = await axios.get(Config.API + '/creator/ttp?text=' + uri, { responseType: 'arraybuffer' })
       await message.sendImage(Buffer.from(ttinullimage.data), "");
     }
 }));
@@ -40,12 +40,12 @@ Bot.addCommand({ pattern: 'attp ?(.*)', fromMe: td, desc: Lang.ATTP_DESC }, (asy
     if (match[1] !== '') {
       var text = match[1]
       var uri = encodeURI(text)
-      var ttinullimage = await axios.get('https://api.xteam.xyz/attp?file&text=' + uri, { responseType: 'arraybuffer' })
+      var ttinullimage = await axios.get(Config.API + '/creator/attp?text=' + uri, { responseType: 'arraybuffer' })
       await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
     } else {
       if (message.reply_message === false) return await message.sendReply(Lang.NEED_WORD);
       var uri = encodeURI(message.reply_message.text)
-      var ttinullimage = await axios.get('https://api.xteam.xyz/attp?file&text=' + uri, { responseType: 'arraybuffer' })
+      var ttinullimage = await axios.get(Config.API + '/creator/attp?text=' + uri, { responseType: 'arraybuffer' })
       await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
     }
 }));
