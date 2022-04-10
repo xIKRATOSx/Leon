@@ -78,10 +78,11 @@ Bot.addCommand({pattern: 'pmsend ?(.*)', fromMe: td, desc: Lang.PMS_DESC, onlyGr
     if (Config.WORKTYPE == 'private') {
       var msg = `${match[1]}`
       await message.client.sendMessage(whom, msg, MessageType.text, { detectLinks: false });
+      await message.sendReply(Lang.SUC_PMS);
     } else {
       var sender = message.data.participant.split('@')[0]
       var msg = `『 ${Lang.MSG} 』\n\n_➥ ${Lang.FRM}_ : ${'https://wa.me/' + sender}\n_➥ ${Lang.MSG}_ : ${match[1]}`
       await message.client.sendMessage(whom, msg, MessageType.text, { detectLinks: false });
+      await message.sendReply(Lang.SUC_PMS);
     }
-    return await message.sendReply(Lang.SUC_PMS);
 }));
