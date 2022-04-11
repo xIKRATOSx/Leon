@@ -23,6 +23,7 @@ var DEV = "Developer"
 if (Config.LANG == 'ML') NAME = "പേര്", ABOUT = "എബൌട്ട്‌", NUMBER = "നമ്പർ", LINK = "ലിങ്ക്", VERSION = "പതിപ്പ്", BRANCH = "ബ്രാഞ്ച്", INT_CMD = "ആന്തരിക കമാൻഡുകൾ", EXT_CMD = "ബാഹ്യ കമാൻഡുകൾ", TTL_CMD = "മൊത്തം കമാൻഡുകൾ", OWNER = "ഉടമ", C_OWNER = "ഉടമയെ ബന്ധപ്പെടുക", DEV = "ഡെവലപ്പർ"
 if (Config.LANG == 'ID') NAME = "Nama", ABOUT = "Tentang", NUMBER = "Nomor", LINK = "Tautan", VERSION = "Versi", BRANCH = "Cabang", INT_CMD = "Perintah Internal", EXT_CMD = "Perintah External", TTL_CMD = "Total Perintah", OWNER = "Pemilik", C_OWNER = "Hubungi Pemilik", DEV = "Pengembang"
 
+/*
 Bot.addCommand({pattern: 'simi ?(.*)', fromMe: td, desc: Lang.SIMI_DESC}, async (message, match) => {
     try {
       await axios.get(Config.API + '/ai/simi?text=' + match[1] + '&lang=' + Config.LANG).then(async (json) => {
@@ -32,6 +33,7 @@ Bot.addCommand({pattern: 'simi ?(.*)', fromMe: td, desc: Lang.SIMI_DESC}, async 
       await message.sendReply(Lang.NOT_FOUND_RESPONSE);
     }
 });
+*/
 
 Bot.addCommand({pattern: 'aco ?(.*)', fromMe: td, desc: Lang.ACO_DESC}, async (message, match) => {
     try {
