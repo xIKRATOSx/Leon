@@ -29,7 +29,12 @@
         "admin": {
             "BAN_DESC": "Kick seseorang dalam grup. Balas pesan atau tandai seseorang untuk menggunakan perintah.",
             "IM_NOT_ADMIN": "*Saya bukan admin di grup ini!*",
-            "USER_NOT_ADMIN": "*Anda bukan admin di grup ini!*",
+            "YOU_NOT_ADMIN": "*Anda bukan admin di grup ini!*",
+            "IM_NOT_ADMIN_PM": "*Saya bukan admin di grup itu!*",
+            "NEED_REPLY": "*Anda harus membalas pesan apa pun!*",
+            "NEED_JID": "*Anda harus masuk ke grup jid!*",
+            "INVALID_JID": "*❌️ JID Tidak Valid! Anda harus memasukkan jid yang valid.*",
+            "ERROR": "*Terjadi kesalahan!*",
             "SET_NAME_DESC": "Mengubah nama grup.",
             "S_NEED_WORD": "*Anda harus memasukkan nama!*",
             "SUC_SNAME": "✅ Berhasil mengubah nama Grup menjadi",

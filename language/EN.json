@@ -29,7 +29,12 @@
         "admin": {
             "BAN_DESC": "Kick someone in the group. Reply to message or tag a person to use command.",
             "IM_NOT_ADMIN": "*I am not admin in this group!*",
-            "USER_NOT_ADMIN": "*You are not an admin in this group!*",
+            "IM_NOT_ADMIN_PM": "*I am not admin in that group!*",
+            "YOU_NOT_ADMIN": "*You are not an admin in this group!*",
+            "NEED_REPLY": "*You must reply to any message!*",
+            "NEED_JID": "*You must enter a group jid!*",
+            "INVALID_JID": "*❌️ Invalid JID! You must enter a valid jid.*",
+            "ERROR": "*An error occurred!*",
             "SET_NAME_DESC": "Changes the group's name.",
             "S_NEED_WORD": "*You must enter a name!*",
             "SUC_SNAME": "✅ Successfully changed the Group's name to",
@@ -43,12 +48,12 @@
             "DEMOTE_DESC": "Takes the authority of any admin.",
             "ALREADY_NOT_ADMIN": "```How can I make someone admin who is already admin?```",
             "DEMOTED": "```, has been demoted!```",
-            "MUTE_DESC": "Close the group chat. Only the admins can send a message.",
-            "MUTED": "```The group chat has been Closed!```",
-            "UNMUTE_DESC": "Open the group chat. Anyone can send a message.",
-            "UNMUTED": "```The group chat has opened!```",
+            "MUTE_DESC": "Mute the group chat. Only the admins can send a message.",
+            "MUTED": "```The group chat has been muted!```",
+            "UNMUTE_DESC": "Unmute the group chat. Anyone can send a message.",
+            "UNMUTED": "```The group chat has unmuted!```",
             "INVITE_DESC": "Provides the group's invitation link.",
-            "INVITE": "```Group Link: ```"
+            "INVITE": "```Group Invite Link: ```"
         },
         "afk": {
             "AFK_DESC": "It makes you AFK - Away From Keyboard.",
