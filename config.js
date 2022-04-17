@@ -10,7 +10,7 @@ DATABASE_URL = process.env.DATABASE_URL === undefined ? './leon.db' : process.en
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
-    VERSION: 'V2',
+    VERSION: 'V3',
     SESSION: process.env.LEON_SESSION === undefined ? '' : process.env.LEON_SESSION,
     ANTILINK: process.env.ANTI_LINK === undefined ? 'false' : process.env.ANTI_LINK,
     AUTOINSTALL: process.env.AUTO_INSTALL === undefined ? 'true' : process.env.AUTO_INSTALL,
