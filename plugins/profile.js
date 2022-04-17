@@ -5,6 +5,7 @@ let fs = require('fs');
 let axios = require('axios');
 let Language = require('../language');
 let Lang = Language.getString('profile');
+let GLang = Language.getString('admin');
 
 var PROFILE_DESC = "Fetches the mentioned or replied user's WhatsApp informations."
 var NEED_USER = "*You must mention or reply to any user's message!*"
@@ -27,10 +28,9 @@ var UNK = "Unknown"
 if (Config.LANG == 'ML') PROFILE_DESC = "മെൻഷൻ ചെയ്തതോ മറുപടി ആയി നൽകിയതോ ആയ ഉപയോക്താവിന്റെ WhatsApp വിവരങ്ങൾ ലഭ്യമാക്കുന്നു.", NEED_USER = "*നിങ്ങൾ ഏതെങ്കിലും ഉപയോക്താവിന്റെ സന്ദേശത്തെ മെൻഷൻ ചെയ്യുകയോ മറുപടി നൽകുകയോ ചെയ്യണം!*", NAME = "പേര്", ABOUT = "എബൌട്ട്‌", NUMBER = "നമ്പർ", N_LINK = "ലിങ്ക്", COUNTRY = "രാജ്യം", UNK = "അജ്ഞാതം", FETCHING = "വിവരങ്ങൾ ലഭ്യമാക്കുന്നു", FETCHINGPM = "വിവരങ്ങൾ ലഭ്യമാക്കുന്നു", ABOUT_DESC = "നൽകിയ ടെക്‌സ്‌റ്റ് ഉപയോഗിച്ച് നിങ്ങളുടെ എബൌട്ട്‌ മാറ്റുന്നു.", NEED_ABOUT = "*നിങ്ങൾ സജ്ജീകരിക്കാൻ പോകുന്ന എബൌട്ട്‌ നൽകണം!*", SUC = "*✅️ വിജയകരമായി സജ്ജീകരിച്ചിരിച്ചു:*\n", MAX = "*നൽകിയ എബൌട്ട്‌ ദൈർഘ്യമേറിയതാണ്!*\n```പരമാവധി 138 പ്രതീകങ്ങൾ മാത്രം.```", ABOUT_DESC = "നൽകിയ ടെക്‌സ്‌റ്റ് ഉപയോഗിച്ച് നിങ്ങളുടെ പേര് മാറ്റുന്നു.", NEED_ABOUT = "*നിങ്ങൾ സജ്ജീകരിക്കാൻ പോകുന്ന പേര് നൽകണം!*", SUC = "*✅️ വിജയകരമായി സജ്ജീകരിച്ചിരിച്ചു:*\n", MAX = "*നൽകിയ പേര് ദൈർഘ്യമേറിയതാണ്!*\n```പരമാവധി 25 പ്രതീകങ്ങൾ മാത്രം.```"
 if (Config.LANG == 'ID') PROFILE_DESC = "Mengambil informasi WhatsApp pengguna yang disebutkan atau dibalas.", NEED_USER = "*Anda harus menyebutkan atau membalas pesan pengguna mana pun!*", NAME = "Nama", ABOUT = "Tentang", NUMBER = "Nomor", N_LINK = "Tautan", COUNTRY = "Negara", UNK = "Tidak dikenal", FETCHING = "Mengambil informasi dari", FETCHINGPM = "Mengambil informasi", ABOUT_DESC = "ubah tentang anda dengan teks yang dimasukkan.", NEED_ABOUT = "*Anda harus memasukkan tentang untuk mengatur!*", SUC = "*✅️ Berhasil mengatur tentang:*\n", MAX = "*Tentang panjang yang dimasukkan terlalu panjang!*\n```Maksimum 138 karakter saja.```", ABOUT_DESC = "ubah tentang anda dengan teks yang dimasukkan.", NEED_ABOUT = "*Anda harus memasukkan nama untuk mengatur!*", SUC = "*✅️ Berhasil mengatur nama:*\n", MAX = "*Nama panjang yang dimasukkan terlalu panjang!*\n```Maksimum 25 karakter saja.```"
 
-Bot.addCommand({pattern: 'leave', fromMe: true, desc: Lang.KICKME_DESC, onlyGroup: true}, (async (message, match) => {
+Bot.addCommand({pattern: 'leave ?(.*)', fromMe: true, desc: Lang.KICKME_DESC}, (async (message, match) => {
 
-    await message.sendReply(Lang.KICKME);
-    await message.client.groupLeave(message.jid);
+var _0x2719e9=_0x264b;(function(_0x467101,_0x31d8fd){var _0x547c4b=_0x264b,_0x4c7c22=_0x467101();while(!![]){try{var _0xa9171a=-parseInt(_0x547c4b(0x1d8))/0x1+-parseInt(_0x547c4b(0x1be))/0x2*(-parseInt(_0x547c4b(0x1da))/0x3)+-parseInt(_0x547c4b(0x1bf))/0x4+-parseInt(_0x547c4b(0x1c3))/0x5*(parseInt(_0x547c4b(0x1d9))/0x6)+-parseInt(_0x547c4b(0x1d4))/0x7+parseInt(_0x547c4b(0x1bd))/0x8+parseInt(_0x547c4b(0x1d6))/0x9;if(_0xa9171a===_0x31d8fd)break;else _0x4c7c22['push'](_0x4c7c22['shift']());}catch(_0x3f23f6){_0x4c7c22['push'](_0x4c7c22['shift']());}}}(_0x2c87,0x8ab44));function _0x264b(_0x4d25d5,_0x553f42){var _0x2c87e3=_0x2c87();return _0x264b=function(_0x264b14,_0x1d115e){_0x264b14=_0x264b14-0x1bd;var _0x5cb025=_0x2c87e3[_0x264b14];return _0x5cb025;},_0x264b(_0x4d25d5,_0x553f42);}function _0xebbd(){var _0x446283=_0x264b,_0xbc0237=[_0x446283(0x1c9),_0x446283(0x1c8),_0x446283(0x1c7),_0x446283(0x1cb),_0x446283(0x1cf),_0x446283(0x1c0),_0x446283(0x1ce),_0x446283(0x1c1),_0x446283(0x1d3),'groupLeave',_0x446283(0x1d1),'sendReply',_0x446283(0x1ca),_0x446283(0x1cc),_0x446283(0x1d7),_0x446283(0x1c4),_0x446283(0x1d0),_0x446283(0x1c2),_0x446283(0x1d2),_0x446283(0x1c5),'endsWith',_0x446283(0x1cd)];return _0xebbd=function(){return _0xbc0237;},_0xebbd();}var _0x326b7b=_0x2806;function _0x2806(_0x1eaa46,_0x1b041d){var _0x2a6e7b=_0xebbd();return _0x2806=function(_0xeab1a5,_0x77bc2a){_0xeab1a5=_0xeab1a5-0xa6;var _0x214edb=_0x2a6e7b[_0xeab1a5];return _0x214edb;},_0x2806(_0x1eaa46,_0x1b041d);}(function(_0x37c3f3,_0x53237f){var _0x424092=_0x264b,_0xe3e111=_0x2806,_0x13c493=_0x37c3f3();while(!![]){try{var _0x40fb9c=-parseInt(_0xe3e111(0xae))/0x1+-parseInt(_0xe3e111(0xa9))/0x2+-parseInt(_0xe3e111(0xab))/0x3+-parseInt(_0xe3e111(0xbb))/0x4+parseInt(_0xe3e111(0xb0))/0x5*(parseInt(_0xe3e111(0xb5))/0x6)+-parseInt(_0xe3e111(0xac))/0x7+parseInt(_0xe3e111(0xad))/0x8*(parseInt(_0xe3e111(0xb2))/0x9);if(_0x40fb9c===_0x53237f)break;else _0x13c493[_0x424092(0x1c6)](_0x13c493[_0x424092(0x1d5)]());}catch(_0x25e9ed){_0x13c493[_0x424092(0x1c6)](_0x13c493[_0x424092(0x1d5)]());}}}(_0xebbd,0xc2155));if(message[_0x326b7b(0xb7)][_0x326b7b(0xba)]('g.us')){if(message[_0x326b7b(0xaa)]&&message[_0x326b7b(0xaa)][_0x326b7b(0xb8)]){var txt=message[_0x326b7b(0xaa)][_0x326b7b(0xb8)];await message['sendReply'](txt);}await message[_0x326b7b(0xb4)][_0x326b7b(0xaf)](message[_0x326b7b(0xb7)]);}else{if(match[0x1]!==''){if(!match[0x1][_0x326b7b(0xba)](_0x326b7b(0xb9))||!match[0x1][_0x326b7b(0xb6)]('@')||isNaN(match[0x1][_0x326b7b(0xb3)]('@')[0x0]))return await message[_0x326b7b(0xb1)](INVALID_JID);try{if(message[_0x326b7b(0xaa)]&&message[_0x326b7b(0xaa)][_0x326b7b(0xb8)]){var txt=message[_0x2719e9(0x1cf)][_0x326b7b(0xb8)];await message[_0x2719e9(0x1d7)][_0x326b7b(0xa6)](match[0x1],txt,MessageType[_0x326b7b(0xb8)]);}await message[_0x326b7b(0xb4)][_0x326b7b(0xaf)](match[0x1]);}catch{return await message[_0x326b7b(0xb1)](GLang[_0x326b7b(0xa8)]);}}else return await message['sendReply'](GLang[_0x326b7b(0xa7)]);}function _0x2c87(){var _0x2f9101=['INVALID_JID','NEED_JID','sendMessage','63mSpAdu','402056fXRHhy','split','69036imrGQM','5591600NseGaa','reply_message','includes','7510705hgPRry','text','1088970zFSFbl','3567312gOKTeV','shift','2531592bhmLjd','client','533458WAsfbh','12daEphA','867174UdlVvd','5948304BPPnZH','6fZbCRK','939080QAuEMy','3819351EsAKqO','3053712DNrrgs','jid','115060rZfpjU','6TAORnn','g.us','push'];_0x2c87=function(){return _0x2f9101;};return _0x2c87();}
 }));
 
 Bot.addCommand({pattern: 'about ?(.*)', fromMe: true, desc: ABOUT_DESC}, (async (message, match) => {
@@ -72,7 +72,7 @@ Bot.addCommand({pattern: 'block ?(.*)', fromMe: true, desc: Lang.BLOCK_DESC}, (a
             });
             await message.client.blockUser(user, "add");
         });
-    } else if (!message.jid.includes('-')) {
+    } else if (!message.jid.endsWith('g.us')) {
         await message.client.sendMessage(message.jid, '*' + Lang.BLOCKED_UPPER + '*', MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
         await message.client.blockUser(message.jid, "add");
     } else {
@@ -93,7 +93,7 @@ Bot.addCommand({pattern: 'unblock ?(.*)', fromMe: true, desc: Lang.UNBLOCK_DESC}
                 contextInfo: {mentionedJid: [user.replace('c.us', 's.whatsapp.net')]}
             });    
         });
-    } else if (!message.jid.includes('-')) {
+    } else if (!message.jid.endsWith('g.us')) {
         await message.client.blockUser(message.jid, "remove");
         await message.client.sendMessage(message.jid, '*' + Lang.UNBLOCKED_UPPER + '*', MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
     } else {
