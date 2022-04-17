@@ -21,6 +21,11 @@
             "required": true,
             "value": "EN"
         },
+        "ALIVE_LOGO": {
+            "description": "The image which should be sent with alive message. You can type 'default' for default image, 'false' for no image ( sends as text ) or you can enter your own image url.",
+            "required": true,
+            "value": "default"
+        },
         "ANTI_LINK": {
             "description": "It makes the bot Antilink.",
             "required": true,
