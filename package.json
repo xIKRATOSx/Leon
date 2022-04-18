@@ -29,6 +29,7 @@
     "axios": "0.21.1",
     "qrcode-reader": "^1.0.4",
     "googlethis": "^1.1.6",
+    "google-translate-tts": "^0.3.0",
     "audiobuffer-to-wav": "1.0.0",
     "chalk": "^4.1.0",
     "coffeehouse": "^2.0.0",
