@@ -1,4 +1,4 @@
-let Bot = require('../events');
+let Leon = require('../events');
 let Config = require('../config');
 let Heroku = require('heroku-client');
 let {secondsToHms} = require('./afk');
@@ -15,7 +15,7 @@ let heroku = new Heroku({
 
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
-Bot.addCommand({pattern: 'restart', fromMe: true, desc: Lang.RESTART_DESC}, (async (message, match) => {
+Leon.addCommand({pattern: 'restart', fromMe: true, desc: Lang.RESTART_DESC}, (async (message, match) => {
 
     await message.sendReply(Lang.RESTART_MSG);
     console.log(baseURI);
@@ -24,7 +24,7 @@ Bot.addCommand({pattern: 'restart', fromMe: true, desc: Lang.RESTART_DESC}, (asy
     });
 }));
 
-Bot.addCommand({pattern: 'shutdown', fromMe: true, desc: Lang.SHUTDOWN_DESC}, (async(message, match) => {
+Leon.addCommand({pattern: 'shutdown', fromMe: true, desc: Lang.SHUTDOWN_DESC}, (async(message, match) => {
 
     await heroku.get(baseURI + '/formation').then(async (formation) => {
         forID = formation[0].id;
@@ -39,7 +39,7 @@ Bot.addCommand({pattern: 'shutdown', fromMe: true, desc: Lang.SHUTDOWN_DESC}, (a
     });
 }));
 
-Bot.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}, (async(message, match) => {
+Leon.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}, (async(message, match) => {
 
     if (match[1] === '') return await message.sendReply(Lang.KEY_VAL_MISSING);
 
@@ -56,7 +56,7 @@ Bot.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}, 
     }
 }));
 
-Bot.addCommand({pattern: 'delvar ?(.*)', fromMe: true, desc: Lang.DELVAR_DESC}, (async (message, match) => {
+Leon.addCommand({pattern: 'delvar ?(.*)', fromMe: true, desc: Lang.DELVAR_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendReply(Lang.KEY_VAL_MISSING);
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
@@ -78,7 +78,7 @@ Bot.addCommand({pattern: 'delvar ?(.*)', fromMe: true, desc: Lang.DELVAR_DESC}, 
 
 }));
 
-Bot.addCommand({pattern: 'getvar ?(.*)', fromMe: true, desc: Lang.GETVAR_DESC}, (async (message, match) => {
+Leon.addCommand({pattern: 'getvar ?(.*)', fromMe: true, desc: Lang.GETVAR_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.sendReply(Lang.KEY_VAL_MISSING);
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
@@ -91,7 +91,7 @@ Bot.addCommand({pattern: 'getvar ?(.*)', fromMe: true, desc: Lang.GETVAR_DESC}, 
     });
 }));
 
-Bot.addCommand({pattern: 'allvar ?(.*)', fromMe: true, desc: Lang.ALLVAR_DESC}, (async (message, match) => {
+Leon.addCommand({pattern: 'allvar ?(.*)', fromMe: true, desc: Lang.ALLVAR_DESC}, (async (message, match) => {
 
       var vars = ''
       await heroku.get(baseURI + "/config-vars").then(async (keys) => {
@@ -104,7 +104,7 @@ Bot.addCommand({pattern: 'allvar ?(.*)', fromMe: true, desc: Lang.ALLVAR_DESC}, 
 
 if (Config.WORKTYPE == 'private') {
 
-    Bot.addCommand({pattern: 'dyno', fromMe: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
+    Leon.addCommand({pattern: 'dyno', fromMe: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
 
         heroku.get('/account').then(async (account) => {
             // have encountered some issues while calling this API via heroku-client
@@ -137,7 +137,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Bot.addCommand({pattern: 'dyno', fromMe: false, desc: Lang.DYNO_DESC}, (async (message, match) => {
+    Leon.addCommand({pattern: 'dyno', fromMe: false, desc: Lang.DYNO_DESC}, (async (message, match) => {
 
         heroku.get('/account').then(async (account) => {
             // have encountered some issues while calling this API via heroku-client
