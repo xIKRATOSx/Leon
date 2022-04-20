@@ -1,4 +1,4 @@
-let Bot = require('../events');
+let Leon = require('../events');
 let Config = require('../config');
 let {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 let fs = require('fs');
@@ -6,10 +6,10 @@ let axios = require('axios');
 let Language = require('../language');
 let Lang = Language.getString('ttp');
 let td = Config.WORKTYPE == 'public' ? false : true
-let tdc = '*Made By Leon*'
+let tdc = ''
 const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_0x4093a5=_0x231d20();while(!![]){try{const _0x2c9b8e=-parseInt(_0x3be458(0x1cc))/0x1+parseInt(_0x3be458(0x1cd))/0x2+-parseInt(_0x3be458(0x1ce))/0x3*(parseInt(_0x3be458(0x1d5))/0x4)+-parseInt(_0x3be458(0x1d2))/0x5*(parseInt(_0x3be458(0x1cb))/0x6)+parseInt(_0x3be458(0x1ca))/0x7*(-parseInt(_0x3be458(0x1cf))/0x8)+-parseInt(_0x3be458(0x1c9))/0x9*(parseInt(_0x3be458(0x1d3))/0xa)+parseInt(_0x3be458(0x1d6))/0xb;if(_0x2c9b8e===_0x495e5b)break;else _0x4093a5['push'](_0x4093a5['shift']());}catch(_0x36af80){_0x4093a5['push'](_0x4093a5['shift']());}}}(_0x3980,0x5d45f));let prefix;function _0x5f2b(_0x94ff48,_0x7fe8de){const _0x398085=_0x3980();return _0x5f2b=function(_0x5f2b84,_0x19f926){_0x5f2b84=_0x5f2b84-0x1c9;let _0x50b6b1=_0x398085[_0x5f2b84];return _0x50b6b1;},_0x5f2b(_0x94ff48,_0x7fe8de);}/\[(\W*)\]/[_0x4dd97e(0x1d0)](Config[_0x4dd97e(0x1d1)])?prefix=Config[_0x4dd97e(0x1d1)][_0x4dd97e(0x1d4)](/\[(\W*)\]/)[0x1][0x0]:prefix='.';function _0x3980(){const _0x18062e=['HANDLERS','535IZOUSd','1059810QxOpEu','match','2614052JUuRKB','16045238ZYbzTX','18hJBqae','39515NEudti','4986UHBKzs','550795CbAHAW','1049082BGfRSP','3jIlrVk','136zZqPpC','test'];_0x3980=function(){return _0x18062e;};return _0x3980();}
 
-    Bot.addCommand({pattern: 'textmaker', fromMe: td, desc: Lang.TEXT_MAKER}, (async (message, match) => {    
+    Leon.addCommand({pattern: 'textmaker', fromMe: td, desc: Lang.TEXT_MAKER}, (async (message, match) => {    
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     try {
@@ -24,7 +24,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'glitch ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'glitch ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -40,7 +40,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
     await message.sendImage(Buffer.from(webimage.data), tdc);
     }));
 
-    Bot.addCommand({pattern: 'blackpink ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'blackpink ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -50,7 +50,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'flame ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'flame ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -61,7 +61,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
     }));
 
 
-    Bot.addCommand({pattern: 'joker ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'joker ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -71,7 +71,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'pokemon ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'pokemon ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -81,7 +81,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'marvel ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'marvel ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -98,7 +98,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     })); 
 
-    Bot.addCommand({pattern: 'metalblue ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'metalblue ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -108,7 +108,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'metalpink ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'metalpink ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -118,7 +118,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'holographic ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'holographic ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -128,7 +128,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'minion ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'minion ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -138,7 +138,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'halloween ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'halloween ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -148,7 +148,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'sparkling ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'sparkling ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -165,7 +165,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'watercolour ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'watercolour ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -175,7 +175,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.NEED_WORD);
 
@@ -185,7 +185,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'neonlight ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'neonlight ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -195,7 +195,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'sandwriting ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'sandwriting ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -205,7 +205,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'cloud ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'cloud ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -215,7 +215,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'pornhub ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'pornhub ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -232,7 +232,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'snow ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'snow ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -242,7 +242,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'metalgold ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'metalgold ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -252,7 +252,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'glue ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'glue ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -262,7 +262,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'led ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'led ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -279,7 +279,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'luxury ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'luxury ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -289,7 +289,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'blood ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'blood ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -299,7 +299,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: 'blackpink ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: 'blackpink ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -309,7 +309,7 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
-    Bot.addCommand({pattern: '3dtext ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+    Leon.addCommand({pattern: '3dtext ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
