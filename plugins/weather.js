@@ -1,4 +1,4 @@
-let Bot = require('../events');
+let Leon = require('../events');
 let {MessageType} = require('@adiwajshing/baileys');
 let got = require('got');
 let fs = require('fs');
@@ -8,7 +8,7 @@ let Lang = Language.getString('weather');
 
 if (Config.WORKTYPE == 'private') {
 
-    Bot.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: true}, async (message, match) => {
+    Leon.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: true}, async (message, match) => {
 
 	    if (match[1] === '') return await message.sendReply(Lang.NEED_LOCATION);
 	    const url = `${Config.API}/weather?place=${match[1]}`;
@@ -34,7 +34,7 @@ if (Config.WORKTYPE == 'private') {
 }
 if (Config.WORKTYPE == 'public') {
 
-    Bot.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: false}, async (message, match) => {
+    Leon.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: false}, async (message, match) => {
 
 	    if (match[1] === '') return await message.sendReply(Lang.NEED_LOCATION);
 	    const url = `${Config.API}/weather?place=${match[1]}`;
