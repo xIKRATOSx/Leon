@@ -1,4 +1,5 @@
-let [Leon, Bot] = require('../events');
+let Leon = require('../events');
+let Bot = require('../events');
 let Config = require('../config');
 let fs = require('fs');
 let {MessageType} = require('@adiwajshing/baileys');
