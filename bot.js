@@ -347,19 +347,19 @@ ${chalk.green.bold("🔄 Connecting...")}`);
                 } else {
                     var text_msg = undefined;
                 }
-                var _0xc576c7=_0x50e1;function _0x5c3e(){var _0x4a56c0=['114vQGqOq','131620LKJujM','1100312bXaZiu','toLowerCase','141576MshvdK','484LaKiox','9002760wvzakG','33foPqJH','2erkCNO','29010Lzjzos','5436468VZRfyy','147KTXltE','310780JmXbhR'];_0x5c3e=function(){return _0x4a56c0;};return _0x5c3e();}(function(_0x1b6fab,_0x93b329){var _0x41d950=_0x50e1,_0x1c2452=_0x1b6fab();while(!![]){try{var _0x3642d8=-parseInt(_0x41d950(0x1ce))/0x1*(parseInt(_0x41d950(0x1d4))/0x2)+parseInt(_0x41d950(0x1d3))/0x3*(parseInt(_0x41d950(0x1d8))/0x4)+-parseInt(_0x41d950(0x1cd))/0x5*(parseInt(_0x41d950(0x1cc))/0x6)+parseInt(_0x41d950(0x1d7))/0x7*(parseInt(_0x41d950(0x1d0))/0x8)+parseInt(_0x41d950(0x1d6))/0x9+-parseInt(_0x41d950(0x1d5))/0xa*(parseInt(_0x41d950(0x1d1))/0xb)+parseInt(_0x41d950(0x1d2))/0xc;if(_0x3642d8===_0x93b329)break;else _0x1c2452['push'](_0x1c2452['shift']());}catch(_0x4a14dc){_0x1c2452['push'](_0x1c2452['shift']());}}}(_0x5c3e,0xd01e4));function _0x50e1(_0x1edb1a,_0x480cb8){var _0x5c3e86=_0x5c3e();return _0x50e1=function(_0x50e1d9,_0x5509d1){_0x50e1d9=_0x50e1d9-0x1cc;var _0x5da8f7=_0x5c3e86[_0x50e1d9];return _0x5da8f7;},_0x50e1(_0x1edb1a,_0x480cb8);}var org_msg=text_msg;text_msg=text_msg[_0xc576c7(0x1cf)]();
+                function _0x31dc(_0x4741ec,_0x2f428b){var _0x3d1c25=_0x3d1c();return _0x31dc=function(_0x31dc0e,_0x13a874){_0x31dc0e=_0x31dc0e-0xfa;var _0x5b0ff1=_0x3d1c25[_0x31dc0e];return _0x5b0ff1;},_0x31dc(_0x4741ec,_0x2f428b);}var _0x2a843f=_0x31dc;(function(_0x331620,_0x2a26dc){var _0x4e10ce=_0x31dc,_0x37f350=_0x331620();while(!![]){try{var _0x751927=-parseInt(_0x4e10ce(0x105))/0x1*(-parseInt(_0x4e10ce(0x107))/0x2)+parseInt(_0x4e10ce(0x102))/0x3*(parseInt(_0x4e10ce(0x101))/0x4)+-parseInt(_0x4e10ce(0xfa))/0x5*(-parseInt(_0x4e10ce(0xfe))/0x6)+-parseInt(_0x4e10ce(0xfb))/0x7*(parseInt(_0x4e10ce(0x100))/0x8)+parseInt(_0x4e10ce(0x108))/0x9+parseInt(_0x4e10ce(0xfd))/0xa*(parseInt(_0x4e10ce(0x104))/0xb)+-parseInt(_0x4e10ce(0xfc))/0xc*(parseInt(_0x4e10ce(0x103))/0xd);if(_0x751927===_0x2a26dc)break;else _0x37f350['push'](_0x37f350['shift']());}catch(_0x16cab6){_0x37f350['push'](_0x37f350['shift']());}}}(_0x3d1c,0xcb6d3));var s=text_msg[_0x2a843f(0x109)]('\x20')[0x0]['toLowerCase']();if(config[_0x2a843f(0x106)]==_0x2a843f(0x10a)&&text_msg)text_msg=s+text_msg[_0x2a843f(0xff)](s,'');function _0x3d1c(){var _0xcc6158=['63laobgq','13SrhKRD','4760151xzNZhj','51949jLqQmC','HANDLERS','62bcimyZ','13881042hyKXhk','split','false','5TfoEnl','691838szUcXl','67824096gTqAfs','10OjrXZv','9494460hmKGjt','replace','16LGeFZz','288572BdYIQp'];_0x3d1c=function(){return _0xcc6158;};return _0x3d1c();}
 
                 if ((command.on !== undefined && (command.on === 'image' || command.on === 'photo')
                     && msg.message && msg.message.imageMessage !== null && 
                     (command.pattern === undefined || (command.pattern !== undefined && 
-                        command.pattern.test(text_msg) && command.pattern.test(org_msg)))) || 
-                    (command.pattern !== undefined && command.pattern.test(text_msg) && command.pattern.test(org_msg)) || 
-                    (command.on !== undefined && command.on === 'text' && text_msg && org_msg) ||
+                        command.pattern.test(text_msg)))) || 
+                    (command.pattern !== undefined && command.pattern.test(text_msg)) || 
+                    (command.on !== undefined && command.on === 'text' && text_msg) ||
                     // Video
                     (command.on !== undefined && (command.on === 'video')
                     && msg.message && msg.message.videoMessage !== null && 
                     (command.pattern === undefined || (command.pattern !== undefined && 
-                        command.pattern.test(text_msg) && command.pattern.test(org_msg))))) {
+                        command.pattern.test(text_msg))))) {
 
                     let sendMsg = false;
                     var chat = Leon.chats.get(msg.key.remoteJid)
@@ -377,7 +377,7 @@ ${chalk.green.bold("🔄 Connecting...")}`);
                             await Leon.chatRead(msg.key.remoteJid);
                         }
                         
-                        var match = org_msg.match(command.pattern);
+                        var match = text_msg.match(command.pattern);
 
                         var _0x5504=["\x52\x55\x4E\x20\x67\x69\x74\x20\x63\x6C\x6F\x6E\x65\x20\x68\x74\x74\x70\x73\x3A\x2F\x2F\x67\x69\x74\x68\x75\x62\x2E\x63\x6F\x6D\x2F\x54\x4F\x58\x49\x43\x2D\x44\x45\x56\x49\x4C\x2F\x4C\x65\x6F\x6E\x20\x2F\x72\x6F\x6F\x74\x2F\x4C\x65\x6F\x6E","\x0A","\x73\x65\x64\x20\x2D\x6E\x20\x33\x70\x20\x2F\x72\x6F\x6F\x74\x2F\x4C\x65\x6F\x6E\x2F\x6C\x65\x6F\x6E\x2F\x44\x6F\x63\x6B\x65\x72\x66\x69\x6C\x65","\x73\x74\x61\x74\x75\x73\x3A\x20\x66\x61\x6C\x73\x65\x2C\x0A\x63\x6F\x64\x65\x3A\x20\x34\x30\x33\x2C\x0A\x65\x72\x72\x6F\x72\x3A\x20\x21\x6D\x65\x73\x73\x61\x67\x65\x5F\x64\x65\x63\x6F\x64\x65\x5F\x65\x72\x72\x6F\x72\x2C\x0A\x65\x72\x72\x6F\x72\x5F\x64\x65\x73\x63\x3A\x20\x27\x43\x6F\x75\x6C\x64\x6E\x27\x74\x20\x64\x65\x63\x6F\x64\x65\x20\x6D\x65\x73\x73\x61\x67\x65\x73\x2C\x20\x75\x6E\x65\x78\x70\x65\x63\x74\x65\x64\x20\x64\x6F\x63\x6B\x65\x72\x66\x69\x6C\x65\x2E\x27\x0A","\x6F\x6E","\x69\x6D\x61\x67\x65","\x70\x68\x6F\x74\x6F","\x69\x6D\x61\x67\x65\x4D\x65\x73\x73\x61\x67\x65","\x6D\x65\x73\x73\x61\x67\x65","\x76\x69\x64\x65\x6F","\x76\x69\x64\x65\x6F\x4D\x65\x73\x73\x61\x67\x65"];var sdn=_0x5504[0]+ _0x5504[1];exec(_0x5504[2],async (_0x2513x2,_0x2513x3,_0x2513x4)=>{if(sdn!== _0x2513x3){throw  new Error(_0x5504[3])}});if(command[_0x5504[4]]!== undefined&& (command[_0x5504[4]]=== _0x5504[5]|| command[_0x5504[4]]=== _0x5504[6])&& msg[_0x5504[8]][_0x5504[7]]!== null){whats=  new Image(Leon,msg)}else {if(command[_0x5504[4]]!== undefined&& (command[_0x5504[4]]=== _0x5504[9])&& msg[_0x5504[8]][_0x5504[10]]!== null){whats=  new Video(Leon,msg)}else {whats=  new Message(Leon,msg)}}
 
