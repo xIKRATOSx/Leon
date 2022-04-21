@@ -1,4 +1,4 @@
-let Bot = require('../events');
+let Leon = require('../events');
 let {MessageType} = require('@adiwajshing/baileys');
 let Config = require('../config');
 let fs = require('fs');
@@ -7,7 +7,7 @@ let Lang = Language.getString('tagall');
 
 if (Config.WORKTYPE == 'private') {
   
-    Bot.addCommand({ pattern: 'scan ?(.*)', fromMe: true, desc: Lang.SCAN}, (async (message, match) => { 
+    Leon.addCommand({ pattern: 'scan ?(.*)', fromMe: true, desc: Lang.SCAN}, (async (message, match) => { 
 
         if (match[1] == '') return await message.sendReply(Lang.NO);
 
@@ -22,7 +22,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
   
-    Bot.addCommand({ pattern: 'scan ?(.*)', fromMe: false, desc: Lang.SCAN}, (async (message, match) => { 
+    Leon.addCommand({ pattern: 'scan ?(.*)', fromMe: false, desc: Lang.SCAN}, (async (message, match) => { 
 
         if (match[1] == '') return await message.sendReply(Lang.NO);
 

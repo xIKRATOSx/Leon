@@ -1,4 +1,4 @@
-let Bot = require('../events');
+let Leon = require('../events');
 let {MessageType, Mimetype} = require('@adiwajshing/baileys');
 let Config = require('../config');
 let fs = require('fs');
@@ -12,7 +12,7 @@ let Lang = Language.getString('removebg');
 
 if (Config.WORKTYPE == 'private') {
 
-    Bot.addCommand({pattern: 'rbg ?(.*)', fromMe: true, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
+    Leon.addCommand({pattern: 'rbg ?(.*)', fromMe: true, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false || message.reply_message.image === false) return await message.client.sendMessage(message.jid,Lang.NEED_PHOTO,MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data})
         if (Config.RBG_API_KEY === false) return await message.client.sendMessage(message.jid,Lang.NO_API_KEY,MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data})
@@ -46,7 +46,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Bot.addCommand({pattern: 'rbg ?(.*)', fromMe: false, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
+    Leon.addCommand({pattern: 'rbg ?(.*)', fromMe: false, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false || message.reply_message.image === false) return await message.client.sendMessage(message.jid,Lang.NEED_PHOTO,MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data})
         if (Config.RBG_API_KEY === false) return await message.client.sendMessage(message.jid,Lang.NO_API_KEY,MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data})

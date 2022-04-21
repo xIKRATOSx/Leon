@@ -1,4 +1,4 @@
-let Bot = require('../events');
+let Leon = require('../events');
 let {MessageType} = require('@adiwajshing/baileys');
 let fs = require('fs')
 let conf = require('../config');
@@ -12,7 +12,7 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + conf.HEROKU.APP_NAME;
 
-Bot.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC}, (async (message, match) => {
+Leon.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
 
     if (match === null) {
@@ -33,7 +33,7 @@ Bot.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC}, 
     }
 }));
 
-Bot.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC}, (async (message, match) => {
+Leon.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
     if (match === null) {
         return await message.client.sendMessage(message.jid,Lang.NEED_REPLY + '\n*Example:* ```.stop "hello"```',MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data})
@@ -49,7 +49,7 @@ Bot.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC}, (asy
 }));
 
 
-Bot.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
+Leon.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
     var filtreler = await FilterDb.getFilter(message.jid);
     if (!filtreler) return; 
     filtreler.map(

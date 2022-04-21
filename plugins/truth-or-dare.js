@@ -1,4 +1,4 @@
-let Bot = require('../events');
+let Leon = require('../events');
 let {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 let fs = require('fs');
 let axios = require('axios');
@@ -10,7 +10,7 @@ var DARE_DESC = "Sends random dare to play truth or dare."
 if (Config.LANG == 'ML') TRUTH_DESC = "ട്രൂത്ത് ഓർ ഡെയർ കളിക്കാനായി ക്രമരഹിതമായ ട്രൂത്ത് അയക്കുന്നു.", DARE_DESC = "ട്രൂത്ത് ഓർ ഡെയർ കളിക്കാനായി ക്രമരഹിതമായ ഡെയർ അയക്കുന്നു."
 if (Config.LANG == 'ID') TRUTH_DESC = "Mengirimkan kebenaran acak untuk memainkan kebenaran atau tantangan..", DARE_DESC = "Mengirimkan tantangan acak untuk bermain kebenaran atau tantangan."
 
-Bot.addCommand({pattern: 'truth ?(.*)', fromMe: true, desc: TRUTH_DESC}, (async (message, match) => {
+Leon.addCommand({pattern: 'truth ?(.*)', fromMe: true, desc: TRUTH_DESC}, (async (message, match) => {
 
   let url = Config.API + '/truth-or-dare/truth?lang=' + Config.LANG
   let res = await got(url);
@@ -22,7 +22,7 @@ Bot.addCommand({pattern: 'truth ?(.*)', fromMe: true, desc: TRUTH_DESC}, (async 
   return await message.sendImage(Buffer.from(img.data), `${"```" + truth + "```"}`);
 }));
 
-Bot.addCommand({pattern: 'dare ?(.*)', fromMe: true, desc: DARE_DESC}, (async (message, match) => {
+Leon.addCommand({pattern: 'dare ?(.*)', fromMe: true, desc: DARE_DESC}, (async (message, match) => {
 
   let url = Config.API + '/truth-or-dare/dare?lang=' + Config.LANG
   let res = await got(url);
