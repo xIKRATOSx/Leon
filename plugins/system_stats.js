@@ -1,4 +1,5 @@
 let Leon = require('../events');
+let Bot = require('../events');
 let {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 let {spawnSync} = require('child_process');
 let Config = require('../config');
