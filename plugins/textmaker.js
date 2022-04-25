@@ -1,4 +1,4 @@
-let Leon = require('../events');
+/*let Leon = require('../events');
 let Config = require('../config');
 let {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 let fs = require('fs');
@@ -318,3 +318,4 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
     await message.sendImage(Buffer.from(webimage.data), tdc);
 
     }));
+*/
