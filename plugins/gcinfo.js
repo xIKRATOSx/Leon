@@ -24,7 +24,7 @@ if (CON.LANG == 'ML') ADMİN_USER = '*📃 അഡ്‌മിൻ എണ്ണം
 
 if (CON.WORKTYPE == 'private') {
   
-    Leon.addCommand({ pattern: 'whois$', fromMe: true, desc: Lang.PL_DESC }, async (message, match) => { 
+    Leon.addCommand({ pattern: 'gcinfo$', fromMe: true, desc: Lang.PL_DESC }, async (message, match) => { 
         if (message.jid.endsWith('g.us')) {
             var json = await message.client.groupMetadataMinimal(message.jid) 
             var code = await message.client.groupInviteCode(message.jid)
@@ -70,7 +70,7 @@ if (CON.WORKTYPE == 'private') {
             var frus = ' ' + fr_user.length + '\n'
             var oth = user_count - trus - hius - azus - srius - ruus - usaus - frus
             const user_count_msg = ADMİN_USER + admin_count + USER_USER + user_count + TR_USER + trus + Hİ_USER + hius + AZ_USER + azus + SRİ_USER + srius + RU_USER + ruus + USA_USER + usaus + FR_USER + frus + OTHER + ' ' + oth + '\n'
-            const msg = `*Grup ID:* ${json.id} \n` + Lang.SUB + `${nwjson.subject} \n` + Lang.OWN + `${json.owner} \n` + Lang.COD + `${code} \n` + user_count_msg + Lang.DES + `\n\n${nwjson.desc}`
+            const msg = `_➥ JID_ : *${json.id}* \n_➥ ` + Lang.SUB + `_ : *${nwjson.subject}* \n_➥ ` + Lang.OWN + `_ : *https://wa.me/${json.owner}* \n_➥ ` + Lang.COD + `_ : *${code}* \n` + user_count_msg + '_➥ ' + Lang.DES + `_ :\n\n*${nwjson.desc}*`
             var ppUrl = await message.client.getProfilePicture(message.jid) 
             if (ppUrl === undefined || ppUrl === null || ppUrl == '') {
                 await message.client.sendMessage(
@@ -87,31 +87,11 @@ if (CON.WORKTYPE == 'private') {
                 );
             }
         }
-        else {
-            var status = await message.client.getStatus(message.jid) 
-            var usppUrl = await message.client.getProfilePicture(message.jid) 
-            var usexists = await message.client.isOnWhatsApp(message.jid)
-            const nwmsg = Lang.JİD + `${usexists.jid} \n` + Lang.ST + `${status.status}`
-            if (usppUrl === undefined || usppUrl === null || usppUrl == '') {
-                await message.client.sendMessage(
-                    message.jid, 
-                    nwmsg, 
-                    MessageType.text
-                );
-            } else {
-                const resimnw = await Axios.get(usppUrl, {responseType: 'arraybuffer'})
-                await message.sendMessage(
-                    Buffer.from(resimnw.data), 
-                    MessageType.image, 
-                    { caption: nwmsg, mimetype: Mimetype.png }
-                );
-            }       
-        }
     });
 }
 else if (CON.WORKTYPE == 'public') {
   
-    Leon.addCommand({ pattern: 'whois$', fromMe: false, desc: Lang.PL_DESC }, async (message, match) => { 
+    Leon.addCommand({ pattern: 'gcinfo$', fromMe: true, desc: Lang.PL_DESC }, async (message, match) => { 
         if (message.jid.endsWith('g.us')) {
             var json = await message.client.groupMetadataMinimal(message.jid) 
             var code = await message.client.groupInviteCode(message.jid)
@@ -157,7 +137,7 @@ else if (CON.WORKTYPE == 'public') {
             var frus = ' ' + fr_user.length + '\n'
             var oth = user_count - trus - hius - azus - srius - ruus - usaus - frus
             const user_count_msg = ADMİN_USER + admin_count + USER_USER + user_count + TR_USER + trus + Hİ_USER + hius + AZ_USER + azus + SRİ_USER + srius + RU_USER + ruus + USA_USER + usaus + FR_USER + frus + OTHER + ' ' + oth + '\n'
-            const msg = `*Grup ID:* ${json.id} \n` + Lang.SUB + `${nwjson.subject} \n` + Lang.OWN + `${json.owner} \n` + Lang.COD + `${code} \n` + user_count_msg + Lang.DES + `\n\n${nwjson.desc}`
+            const msg = `_➥ JID_ : *${json.id}* \n_➥ ` + Lang.SUB + `_ : *${nwjson.subject}* \n_➥ ` + Lang.OWN + `_ : *https://wa.me/${json.owner}* \n_➥ ` + Lang.COD + `_ : *${code}* \n` + user_count_msg + '_➥ ' + Lang.DES + `_ :\n\n*${nwjson.desc}*`
             var ppUrl = await message.client.getProfilePicture(message.jid) 
             if (ppUrl === undefined || ppUrl === null || ppUrl == '') {
                 await message.client.sendMessage(
@@ -170,29 +150,9 @@ else if (CON.WORKTYPE == 'public') {
                 await message.sendMessage(
                     Buffer.from(resim.data), 
                     MessageType.image, 
-                    {caption: msg, mimetype: Mimetype.png }
+                    {caption: msg, mimetype: Mimetype.png}
                 );
             }
-        }
-        else {
-            var status = await message.client.getStatus(message.jid) 
-            var usppUrl = await message.client.getProfilePicture(message.jid) 
-            var usexists = await message.client.isOnWhatsApp(message.jid)
-            const nwmsg = Lang.JİD + `${usexists.jid} \n` + Lang.ST + `${status.status}`
-            if (usppUrl === undefined || usppUrl === null || usppUrl == '') {
-                await message.client.sendMessage(
-                    message.jid, 
-                    nwmsg, 
-                    MessageType.text
-                );
-            } else {
-                const resimnw = await Axios.get(usppUrl, {responseType: 'arraybuffer'})
-                await message.sendMessage(
-                    Buffer.from(resimnw.data), 
-                    MessageType.image, 
-                    { caption: nwmsg, mimetype: Mimetype.png }
-                );
-            }       
         }
     });
 }
