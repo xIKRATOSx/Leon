@@ -43,24 +43,24 @@ Leon.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (messa
             var im = await checkImAdmin(message)
             if (!im) return;
             if (us) return;
-            await message.client.groupRemove(message.jid, [message.data.participant]);         
-            await message.client.sendMessage(message.jid,ldc, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+            await message.sendReply(ldc);
+            await message.client.groupRemove(message.jid, [message.data.participant]);
         } 
         else if (regex2.test(message.message)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
             if (!im) return;
             if (us) return;
+            await message.sendReply(ldc);
             await message.client.groupRemove(message.jid, [message.data.participant]);         
-            await message.client.sendMessage(message.jid,ldc, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
         }
         else if (message.message.match(/((?:[.]com)\b)/i)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
             if (!im) return;
             if (us) return;
+            await message.sendReply(ldc);
             await message.client.groupRemove(message.jid, [message.data.participant]);         
-            await message.client.sendMessage(message.jid,ldc, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
         }
     }
 }));
