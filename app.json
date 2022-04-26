@@ -31,6 +31,11 @@
             "required": true,
             "value": "false"
         },
+        "ANTI_SPAM": {
+            "description": "It automatically detects whether the message is spamming and removes them if they.",
+            "required": true,
+            "value": "false"
+        },
         "ANTI_EMOJI": {
             "description": "It makes the bot Antiemoji. Restricts emoji.",
             "required": true,
