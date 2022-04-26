@@ -14,6 +14,7 @@ module.exports = {
     SESSION: process.env.LEON_SESSION === undefined ? '' : process.env.LEON_SESSION,
     ALIVELOGO: process.env.ALIVE_LOGO === undefined ? 'default' : process.env.ALIVE_LOGO,
     ANTILINK: process.env.ANTI_LINK === undefined ? 'false' : process.env.ANTI_LINK,
+    ANTISPAM: process.env.ANTI_SPAM === undefined ? 'false' : process.env.ANTI_SPAM,
     AUTOINSTALL: process.env.AUTO_INSTALL === undefined ? 'true' : process.env.AUTO_INSTALL,
     PVTDELMSG: process.env.PRIVATE_DELETING_MESSAGE === undefined ? 'false' : process.env.PRIVATE_DELETING_MESSAGE,
     ERROR_ANALYZER: process.env.ERROR_ANALYZER === undefined ? 'true' : process.env.ERROR_ANALYZER,
