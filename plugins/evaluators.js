@@ -32,8 +32,8 @@ var ldc = ''
 var sdc = ''
 var EMOJI_DETECT = ''
 if (Config.LANG == 'EN') ldc = '*🛑 Link Detected! 🛑*', EMOJI_DETECT = '*🛑 Emoji Detected! 🛑*', sdc = '*🛑 Spam Detected! 🛑*'
-if (Config.LANG == 'ML') ldc = '*🛑 ലിങ്ക് കണ്ടെത്തി! 🛑*', EMOJI_DETECT = '*🛑 ഇമോജി കണ്ടെത്തി! 🛑*', sdc = '*🛑 Spam Detected! 🛑*'
-if (Config.LANG == 'ID') ldc = '*🛑 tautan terdeteksi! 🛑*', EMOJI_DETECT = '*🛑 Emoji terdeteksi! 🛑*', sdc = '*🛑 Spam Detected! 🛑*'
+if (Config.LANG == 'ML') ldc = '*🛑 ലിങ്ക് കണ്ടെത്തി! 🛑*', EMOJI_DETECT = '*🛑 ഇമോജി കണ്ടെത്തി! 🛑*', sdc = '*🛑 സ്പാം കണ്ടെത്തി! 🛑*'
+if (Config.LANG == 'ID') ldc = '*🛑 tautan terdeteksi! 🛑*', EMOJI_DETECT = '*🛑 Emoji terdeteksi! 🛑*', sdc = '*🛑 Spam terdeteksi! 🛑*'
 
 Leon.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (Config.ANTILINK == 'true' && message.jid !== '94768826133-1630756178@g.us') {
