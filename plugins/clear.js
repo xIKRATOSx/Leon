@@ -11,7 +11,7 @@ var NAME = 'Name'
 var ID = 'ID'
 var SIZE = 'Size'
 var EXT = 'Extention'
-var NO_APIKEY = '*You don\'t have an apikey from imgbb.*\n```Please get an apikey from https://api.imgbb.com/ by signing up here: https://imgbb.com/```',
+var NO_APIKEY = '*You don\'t have an apikey from imgbb.*\n```Please get an apikey from https://api.imgbb.com/ by signing up here: https://imgbb.com/```'
 var ERROR = '*❌️ Error! This maybe because of invalid imgbb apikey or the entered file name is too lengthy!*'
 if (Config.LANG == 'ML') URL_DESC = 'imgbb-ൽ ചിത്രം അപ്‌ലോഡ് ചെയ്യുകയും url അയയ്ക്കുകയും ചെയ്യുന്നു.', NAME = 'പേര്', ID = 'ഐഡി', SIZE = 'വലിപ്പം', EXT = 'വിപുലീകരണം', NO_APIKEY = '*നിങ്ങൾക്ക് imgbb-ൽ നിന്ന് ഒരു അപികെ ഇല്ല.*\n```https://imgbb.com/ ഇവിടെ സൈൻ അപ്പ് ചെയ്തുകൊണ്ട് https://api.imgbb.com/ എന്നതിൽ നിന്ന് ഒരു apikey നേടുക```', ERROR = '*❌️ പിശക്! ഇത് അസാധുവായ imgbb apikey കാരണമാവാം അല്ലെങ്കിൽ നൽകിയ ഫയലിന്റെ പേര് വളരെ ദൈർഘ്യമേറിയതാണ്!*'
 if (Config.LANG == 'ID') URL_DESC = 'Unggah gambar di imgbb dan kirim url.', NAME = 'Nama', ID = 'ID', SIZE = 'Ukuran', EXT = 'Ekstensi', NO_APIKEY = '*Anda tidak memiliki apikey dari imgbb.*\n```Silakan dapatkan apikey dari https://api.imgbb.com/ dengan mendaftar di sini: https://imgbb.com/```', ERROR = '*❌️ Kesalahan! Ini mungkin karena imgbb apikey yang tidak valid atau nama file yang dimasukkan terlalu panjang!*'
