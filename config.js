@@ -13,6 +13,7 @@ module.exports = {
     VERSION: 'V4',
     SESSION: process.env.LEON_SESSION === undefined ? '' : process.env.LEON_SESSION,
     ALIVELOGO: process.env.ALIVE_LOGO === undefined ? 'default' : process.env.ALIVE_LOGO,
+    IMGBBAPIKEY: process.env.IMGBB_APIKEY === undefined ? 'false' : process.env.IMGBB_APIKEY,
     ANTILINK: process.env.ANTI_LINK === undefined ? 'false' : process.env.ANTI_LINK,
     ANTISPAM: process.env.ANTI_SPAM === undefined ? 'false' : process.env.ANTI_SPAM,
     AUTOINSTALL: process.env.AUTO_INSTALL === undefined ? 'true' : process.env.AUTO_INSTALL,
