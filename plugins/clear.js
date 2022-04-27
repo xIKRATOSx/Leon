@@ -4,6 +4,7 @@ let fs = require('fs');
 let Config = require('../config');
 let Language = require('../language');
 let Lang = Language.getString('clear');
+let td = Config['WORKTYPE'] == 'private' ? true : false;
 
 var URL_DESC = 'Uploads image in imgbb and sends url.'
 var NAME = 'Name'
