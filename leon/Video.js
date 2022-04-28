@@ -1,1 +1,150 @@
-const _0x117b3e=_0x1109;(function(_0x188cf8,_0x54452f){const _0x29cdaa=_0x1109,_0x15b0cf=_0x188cf8();while(!![]){try{const _0x16778f=parseInt(_0x29cdaa(0x1ce))/0x1+-parseInt(_0x29cdaa(0x1bc))/0x2+-parseInt(_0x29cdaa(0x1b6))/0x3*(-parseInt(_0x29cdaa(0x1a6))/0x4)+-parseInt(_0x29cdaa(0x1ac))/0x5*(parseInt(_0x29cdaa(0x1c9))/0x6)+parseInt(_0x29cdaa(0x19b))/0x7*(parseInt(_0x29cdaa(0x194))/0x8)+-parseInt(_0x29cdaa(0x1d2))/0x9+-parseInt(_0x29cdaa(0x1a9))/0xa*(-parseInt(_0x29cdaa(0x1b7))/0xb);if(_0x16778f===_0x54452f)break;else _0x15b0cf['push'](_0x15b0cf['shift']());}catch(_0x2edf64){_0x15b0cf['push'](_0x15b0cf['shift']());}}}(_0x1a28,0x31af9));const {MessageType,Presence,Mimetype,MessageOptions}=require(_0x117b3e(0x1c7)),Base=require(_0x117b3e(0x19f)),Message=require('./Message'),ReplyMessage=require(_0x117b3e(0x1bd));function _0x1109(_0x1ad0db,_0x3b292d){const _0x1a2852=_0x1a28();return _0x1109=function(_0x110931,_0x28d496){_0x110931=_0x110931-0x192;let _0xf260cd=_0x1a2852[_0x110931];return _0xf260cd;},_0x1109(_0x1ad0db,_0x3b292d);}class Video extends Base{constructor(_0x2e3996,_0x222d30){const _0x4e29cd=_0x117b3e;super(_0x2e3996);if(_0x222d30)this[_0x4e29cd(0x1b8)](_0x222d30);}[_0x117b3e(0x1b8)](_0x1614c6){const _0x376e72=_0x117b3e;return this['id']=_0x1614c6[_0x376e72(0x1c6)]['id']===undefined?undefined:_0x1614c6['key']['id'],this[_0x376e72(0x1a2)]=_0x1614c6['key'][_0x376e72(0x1a1)],this[_0x376e72(0x1b9)]=_0x1614c6['key'][_0x376e72(0x1b9)],this['caption']=_0x1614c6[_0x376e72(0x1cd)][_0x376e72(0x1c4)]['caption']===null?_0x1614c6[_0x376e72(0x1cd)]['videoMessage'][_0x376e72(0x1b4)]:'',this[_0x376e72(0x1c5)]=_0x1614c6[_0x376e72(0x1cd)][_0x376e72(0x1c4)][_0x376e72(0x1c5)],this['timestamp']=typeof _0x1614c6[_0x376e72(0x1bf)]===_0x376e72(0x1ca)?_0x1614c6[_0x376e72(0x1bf)][_0x376e72(0x1a4)]:_0x1614c6['messageTimestamp'],this[_0x376e72(0x1d4)]=_0x1614c6[_0x376e72(0x1cd)]['videoMessage']['mimetype'],this['height']=_0x1614c6[_0x376e72(0x1cd)][_0x376e72(0x1c4)][_0x376e72(0x1d1)],this[_0x376e72(0x197)]=_0x1614c6[_0x376e72(0x1cd)][_0x376e72(0x1c4)][_0x376e72(0x197)],this[_0x376e72(0x1a8)]=_0x1614c6[_0x376e72(0x1cd)][_0x376e72(0x1c4)][_0x376e72(0x1a8)],this[_0x376e72(0x1ae)]=_0x1614c6,_0x1614c6[_0x376e72(0x1cd)]['videoMessage'][_0x376e72(0x1bb)]('contextInfo')&&_0x1614c6[_0x376e72(0x1cd)][_0x376e72(0x193)][_0x376e72(0x1a7)]?this['reply_message']=new ReplyMessage(this[_0x376e72(0x1d0)],_0x1614c6[_0x376e72(0x1cd)][_0x376e72(0x1c4)][_0x376e72(0x193)]):this[_0x376e72(0x19c)]=![],super[_0x376e72(0x1b8)](_0x1614c6);}async[_0x117b3e(0x1c0)](){const _0x3b9f73=_0x117b3e;return await this[_0x3b9f73(0x1d0)][_0x3b9f73(0x1d3)](this['jid'],{'id':this['id'],'remoteJid':this[_0x3b9f73(0x1a2)],'fromMe':!![]});}async[_0x117b3e(0x1b5)](_0x42ed04){const _0x4ac545=_0x117b3e;var _0x1c3131=await this[_0x4ac545(0x1d0)][_0x4ac545(0x1c1)](this[_0x4ac545(0x1a2)],_0x42ed04,MessageType['text'],{'contextInfo':{'forwardingScore':0x31,'isForwarded':!![]},'quoted':this[_0x4ac545(0x1ae)]});return new Message(this[_0x4ac545(0x1d0)],_0x1c3131);}async['sendMessage'](_0x64957f,_0x5b8e78,_0x292808){const _0x57d522=_0x117b3e;return await this[_0x57d522(0x1d0)][_0x57d522(0x1c1)](this['jid'],_0x64957f,_0x5b8e78,_0x292808);}async[_0x117b3e(0x1ba)](_0x3f0159,_0x4e65e5){const _0x4b8cf7=_0x117b3e;return await this[_0x4b8cf7(0x1d0)][_0x4b8cf7(0x1c1)](this['jid'],_0x3f0159,MessageType[_0x4b8cf7(0x1ad)],{'mimetype':Mimetype[_0x4b8cf7(0x1c3)],'contextInfo':{'forwardingScore':0x31,'isForwarded':!![]},'caption':_0x4e65e5,'quoted':this[_0x4b8cf7(0x1ae)]});}async[_0x117b3e(0x1be)](_0xd45553,_0x53448e){const _0xe370d3=_0x117b3e;return await this[_0xe370d3(0x1d0)]['sendMessage'](this[_0xe370d3(0x1a2)],_0xd45553,MessageType[_0xe370d3(0x1ad)],{'mimetype':Mimetype[_0xe370d3(0x1c3)],'contextInfo':{'forwardingScore':0x31,'isForwarded':!![]},'caption':_0x53448e,'readViewOnce':!![],'quoted':this[_0xe370d3(0x1ae)]});}async['sendVideo'](_0x36d104,_0x4d6348){const _0x1320e0=_0x117b3e;return await this[_0x1320e0(0x1d0)]['sendMessage'](this['jid'],_0x36d104,MessageType['video'],{'mimetype':Mimetype[_0x1320e0(0x195)],'caption':_0x4d6348,'contextInfo':{'forwardingScore':0x31,'isForwarded':!![]},'quoted':this[_0x1320e0(0x1ae)]});}async[_0x117b3e(0x1cf)](_0x5ddfe6,_0x180612){const _0x550088=_0x117b3e;return await this[_0x550088(0x1d0)][_0x550088(0x1c1)](this['jid'],_0x5ddfe6,MessageType[_0x550088(0x19a)],{'mimetype':Mimetype[_0x550088(0x195)],'caption':_0x180612,'contextInfo':{'forwardingScore':0x31,'isForwarded':!![]},'readViewOnce':!![],'quoted':this[_0x550088(0x1ae)]});}async[_0x117b3e(0x198)](_0x5beae2,_0x4f2ec7){const _0x158d31=_0x117b3e;return await this['client'][_0x158d31(0x1c1)](this['jid'],_0x5beae2,MessageType[_0x158d31(0x19a)],{'mimetype':Mimetype[_0x158d31(0x1a5)],'caption':_0x4f2ec7,'contextInfo':{'forwardingScore':0x31,'isForwarded':!![]},'quoted':this['data']});}async[_0x117b3e(0x1ab)](_0x4630ec){const _0x51173a=_0x117b3e;return await this['client']['sendMessage'](this['jid'],_0x4630ec,MessageType[_0x51173a(0x199)],{'mimetype':Mimetype['mp4Audio']});}async[_0x117b3e(0x1a3)](_0x5df508){const _0x3830ff=_0x117b3e;return await this[_0x3830ff(0x1d0)]['sendMessage'](this[_0x3830ff(0x1a2)],_0x5df508,MessageType[_0x3830ff(0x199)],{'mimetype':Mimetype['mp4Audio'],'ptt':!![]});}async[_0x117b3e(0x1cc)](){const _0x599c09=_0x117b3e;return await this[_0x599c09(0x1d0)][_0x599c09(0x1c8)](this[_0x599c09(0x1a2)],_0x599c09(0x1b3));}async[_0x117b3e(0x1b2)](){const _0x14524a=_0x117b3e;return await this[_0x14524a(0x1d0)][_0x14524a(0x1b0)](this[_0x14524a(0x1a2)],Presence[_0x14524a(0x19d)]);}async[_0x117b3e(0x19e)](){const _0xe95560=_0x117b3e;return await this[_0xe95560(0x1d0)]['updatePresence'](this[_0xe95560(0x1a2)],Presence[_0xe95560(0x1cb)]);}async[_0x117b3e(0x1aa)](){const _0xc4cace=_0x117b3e;return await this[_0xc4cace(0x1d0)]['updatePresence'](this[_0xc4cace(0x1a2)],Presence[_0xc4cace(0x1b1)]);}async[_0x117b3e(0x192)](){const _0x210154=_0x117b3e;return await this[_0x210154(0x1d0)][_0x210154(0x1b0)](this[_0x210154(0x1a2)],Presence['unavailable']);}async[_0x117b3e(0x1af)](){const _0x5c2b88=_0x117b3e;return await this[_0x5c2b88(0x1d0)][_0x5c2b88(0x1c8)](this[_0x5c2b88(0x1a2)]);}async[_0x117b3e(0x196)](_0x2a1304=this['id']){const _0x382b4b=_0x117b3e;return await this[_0x382b4b(0x1d0)]['downloadAndSaveMediaMessage'](this[_0x382b4b(0x1ae)],_0x2a1304),this['id']+'.'+this[_0x382b4b(0x1d4)][_0x382b4b(0x1a0)]('/')[0x1];}}function _0x1a28(){const _0x17b2f5=['sendOffline','contextInfo','75224VkpKIX','mp4','download','width','sendVideoAsGif','audio','video','49rWZmiO','reply_message','composing','sendRecording','./Base','split','remoteJid','jid','sendAudioAsVoice','low','gif','176pXxvdX','quotedMessage','mediaKey','90qNerAa','sendOnline','sendAudio','10skPLYN','image','data','sendRead','updatePresence','available','sendTyping','unread','caption','sendReply','27582QZMhfd','368863wfWKiG','_patch','fromMe','sendImage','hasOwnProperty','679570RexFnr','./ReplyMessage','sendImageAsViewonce','messageTimestamp','delete','sendMessage','exports','png','videoMessage','url','key','@adiwajshing/baileys','chatRead','619188Pbilrk','object','recording','sendUnread','message','244231oqJmPq','sendVideoAsViewonce','client','height','2400219RZKAQJ','deleteMessage','mimetype'];_0x1a28=function(){return _0x17b2f5;};return _0x1a28();};module[_0x117b3e(0x1c2)]=Video;
+const {MessageType, Presence, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
+const Base = require('./Base');
+const Message = require('./Message');
+const ReplyMessage = require('./ReplyMessage');
+
+class Video extends Base {
+    constructor(client, data) {
+        super(client);
+        if (data) this._patch(data);
+    }
+
+    _patch(data) {
+        this.id = data.key.id === undefined ? undefined : data.key.id;
+        this.jid = data.key.remoteJid;
+        this.fromMe = data.key.fromMe;
+        this.caption = data.message.videoMessage.caption === null ? data.message.videoMessage.caption : '';
+        this.url = data.message.videoMessage.url;
+        this.timestamp = typeof(data.messageTimestamp) === 'object' ? data.messageTimestamp.low : data.messageTimestamp;
+        this.mimetype = data.message.videoMessage.mimetype;
+        this.height = data.message.videoMessage.height;
+        this.width = data.message.videoMessage.width;
+        this.mediaKey = data.message.videoMessage.mediaKey;
+        this.data = data;
+        
+        if (data.message.videoMessage.hasOwnProperty('contextInfo') && data.message.contextInfo.quotedMessage) { 
+            this.reply_message = new ReplyMessage(this.client, data.message.videoMessage.contextInfo); }
+        else {
+            this.reply_message = false;
+        }
+        
+        return super._patch(data);
+    }
+
+    async delete() {
+        return await this.client.deleteMessage(this.jid, {id: this.id, remoteJid: this.jid, fromMe: true})
+    }
+
+    async sendReply(text) {
+        var message = await this.client.sendMessage(this.jid, text, MessageType.text, { quoted: this.data })
+        return new Message(this.client, message)
+    }
+
+    async sendButton(msg, footer, id, name) {
+      const buttons = [
+        {buttonId: id, buttonText: {displayText: name}, type: 1}
+      ]
+
+      const buttonMessage = {
+          contentText: msg,
+          footerText: footer,
+          buttons: buttons,
+          headerType: 1
+      }
+      await this.client.sendMessage(this.jid, buttonMessage, MessageType.buttonsMessage, { quoted: this.data })
+    }
+
+    async send2Button(msg, footer, id1, name1, id2, name2) {
+      const buttons = [
+        {buttonId: id1, buttonText: {displayText: name1}, type: 1},
+        {buttonId: id2, buttonText: {displayText: name2}, type: 1}
+      ]
+
+      const buttonMessage = {
+          contentText: msg,
+          footerText: footer,
+          buttons: buttons,
+          headerType: 1
+      }
+      await this.client.sendMessage(this.jid, buttonMessage, MessageType.buttonsMessage, { quoted: this.data })
+    }
+
+    async send3Button(msg, footer, id1, name1, id2, name2, id3, name3) {
+      const buttons = [
+        {buttonId: id1, buttonText: {displayText: name1}, type: 1},
+        {buttonId: id2, buttonText: {displayText: name2}, type: 1},
+        {buttonId: id3, buttonText: {displayText: name3}, type: 1}
+      ]
+
+      const buttonMessage = {
+          contentText: msg,
+          footerText: footer,
+          buttons: buttons,
+          headerType: 1
+      }
+      await this.client.sendMessage(this.jid, buttonMessage, MessageType.buttonsMessage, { quoted: this.data })
+    }
+
+    async sendMessage(content, type, options) {
+        return await this.client.sendMessage(this.jid, content, type, options)
+    }
+
+    async sendImage(image, cap) {
+        return await this.client.sendMessage(this.jid, image, MessageType.image, {mimetype: Mimetype.png, caption: cap, quoted: this.data})
+    }
+
+    async sendImageAsViewonce(image, cap) {
+        return await this.client.sendMessage(this.jid, image, MessageType.image, {mimetype: Mimetype.png, caption: cap, readViewOnce: true, quoted: this.data})
+    }
+
+    async sendVideo(video, cap) {
+        return await this.client.sendMessage(this.jid, video, MessageType.video, {mimetype: Mimetype.mp4, caption: cap, quoted: this.data})
+    }
+
+    async sendVideoAsViewonce(video, cap) {
+        return await this.client.sendMessage(this.jid, video, MessageType.video, {mimetype: Mimetype.mp4, caption: cap, readViewOnce: true, quoted: this.data})
+    }
+
+    async sendVideoAsGif(gif, cap) {
+        return await this.client.sendMessage(this.jid, gif, MessageType.video, {mimetype: Mimetype.gif, caption: cap, quoted: this.data})
+    }
+
+    async sendAudio(audio) {
+        return await this.client.sendMessage(this.jid, audio, MessageType.audio, {mimetype: Mimetype.mp4Audio, quoted: this.data})
+    }
+
+    async sendAudioAsVoice(voice) {
+        return await this.client.sendMessage(this.jid, voice, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true, quoted: this.data})
+    }
+
+    async sendUnread() {
+        return await this.client.chatRead(this.jid, 'unread')
+    }
+
+    async sendTyping() {
+        return await this.client.updatePresence(this.jid, Presence.composing) ;
+    }
+
+    async sendRecording() {
+        return await this.client.updatePresence(this.jid, Presence.recording) ;
+    }
+
+    async sendOnline() {
+        return await this.client.updatePresence(this.jid, Presence.available) ;
+    }
+
+    async sendOffline() {
+        return await this.client.updatePresence(this.jid, Presence.unavailable) ;
+    }
+
+    async sendRead() {
+        return await this.client.chatRead(this.jid);
+    }
+
+    async download(location = this.id) {
+        await this.client.downloadAndSaveMediaMessage(this.data, location);
+        return this.id + '.' + this.mimetype.split('/')[1];
+    }
+};
+
+module.exports = Video;
