@@ -36,7 +36,8 @@ Leon.addCommand({pattern: 'simi ?(.*)', fromMe: td, desc: Lang.SIMI_DESC}, async
 
 Leon.addCommand({pattern: 'aco ?(.*)', fromMe: td, desc: Lang.ACO_DESC}, async (message, match) => {
     try {
-      let id = message.jid.endsWith('g.us') ? message.data.participant.split('@')[0] : message.jid.split('@')[0]
+      var id = message.jid.endsWith('g.us') ? message.data.participant.split('@')[0] : message.jid.split('@')[0]
+      if (id == message.client.user.jid.split('@')[0]) id = message.client.user.jid.split('@')[0]
       await axios.get(Config.API + '/ai/aco?text=' + encodeURIComponent(match[1]) + '&id=' + id + '&lang=' + Config.LANG).then(async (json) => {
         await message.sendReply('\n*💬 '+ Lang.BOT_DIVIDER +'* ```' + json.data.response + '```\n');
       });

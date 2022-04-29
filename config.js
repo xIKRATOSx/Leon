@@ -10,11 +10,14 @@ DATABASE_URL = process.env.DATABASE_URL === undefined ? './leon.db' : process.en
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
-    VERSION: 'V3',
+    VERSION: 'V4',
     SESSION: process.env.LEON_SESSION === undefined ? '' : process.env.LEON_SESSION,
     ALIVELOGO: process.env.ALIVE_LOGO === undefined ? 'default' : process.env.ALIVE_LOGO,
+    IMGBBAPIKEY: process.env.IMGBB_APIKEY === undefined ? 'false' : process.env.IMGBB_APIKEY,
     ANTILINK: process.env.ANTI_LINK === undefined ? 'false' : process.env.ANTI_LINK,
+    ANTISPAM: process.env.ANTI_SPAM === undefined ? 'false' : process.env.ANTI_SPAM,
     AUTOINSTALL: process.env.AUTO_INSTALL === undefined ? 'true' : process.env.AUTO_INSTALL,
+    PVTDELMSG: process.env.PRIVATE_DELETING_MESSAGE === undefined ? 'false' : process.env.PRIVATE_DELETING_MESSAGE,
     ERROR_ANALYZER: process.env.ERROR_ANALYZER === undefined ? 'true' : process.env.ERROR_ANALYZER,
     ANTIEMO: process.env.ANTI_EMOJI === undefined ? 'false' : process.env.ANTI_EMOJI,
     AUTOBIO: process.env.AUTO_BIO === undefined ? 'false' : process.env.AUTO_BIO,
@@ -39,7 +42,6 @@ module.exports = {
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     BRANCH: 'master',
     API: 'https://api-toxic-devil.herokuapp.com/api',
-    XTEAM_API: 'ab9942f95c09ca89',
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
         API_KEY: process.env.HEROKU_API_KEY === undefined ? '' : process.env.HEROKU_API_KEY,
@@ -47,13 +49,9 @@ module.exports = {
     },
     DATABASE_URL: DATABASE_URL,
     DATABASE: DATABASE_URL === './leon.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
-    RBG_API_KEY: process.env.REMOVE_BG_API_KEY === undefined ? 'pX3Hf4sYKxLW9MCXc5RZZKKV' : process.env.REMOVE_BG_API_KEY,
+    RBG_API_KEY: process.env.REMOVE_BG_API_KEY === undefined ? 'false' : process.env.REMOVE_BG_API_KEY,
     NO_ONLINE: process.env.NO_ONLINE === undefined ? true : convertToBool(process.env.NO_ONLINE),
     SUDO: process.env.SUDO === undefined ? false : process.env.SUDO,
     DEBUG: DEBUG,
-    COFFEEHOUSE_API_KEY: process.env.COFFEEHOUSE_API_KEY === undefined ? false : process.env.COFFEEHOUSE_API_KEY,
-    WITAI_API: "TEYMELA6DMC4XB5YM3SPTTQWUUIBKURG",
-    SUPPORT: "905524317852-1612300121",
-    SUPPORT2: "905511384572-1617736751",
-    SUPPORT3: "905511384572-1621015274"
+    WITAI_API: "TEYMELA6DMC4XB5YM3SPTTQWUUIBKURG"
 };
