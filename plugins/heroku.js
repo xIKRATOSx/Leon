@@ -19,7 +19,7 @@ Leon.addCommand({pattern: 'restart', fromMe: true, desc: Lang.RESTART_DESC}, (as
 
     await message.sendReply(Lang.RESTART_MSG);
     console.log(baseURI);
-    await heroku.delete(baseURI + '/dynos').catch((error => throw error.message));
+    await heroku.delete(baseURI + '/dynos').catch(error => { throw error.message });
 }));
 
 Leon.addCommand({pattern: 'shutdown', fromMe: true, desc: Lang.SHUTDOWN_DESC}, (async(message, match) => {
@@ -32,7 +32,7 @@ Leon.addCommand({pattern: 'shutdown', fromMe: true, desc: Lang.SHUTDOWN_DESC}, (
                 quantity: 0
             }
         });
-    }).catch((error => throw error.message));
+    }).catch(error => { throw error.message });
 }));
 
 Leon.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}, (async(message, match) => {
@@ -68,7 +68,7 @@ Leon.addCommand({pattern: 'delvar ?(.*)', fromMe: true, desc: Lang.DELVAR_DESC},
             }
         }
         await message.sendReply(Lang.NOT_FOUND);
-    }).catch((error => throw error.message));
+    }).catch(error => { throw error.message });
 }));
 
 Leon.addCommand({pattern: 'getvar ?(.*)', fromMe: true, desc: Lang.GETVAR_DESC}, (async (message, match) => {
@@ -79,7 +79,7 @@ Leon.addCommand({pattern: 'getvar ?(.*)', fromMe: true, desc: Lang.GETVAR_DESC},
             if (match[1].trim() == vr) return await message.sendReply("```{} - {}```".format(vr, vars[vr]));
         }
         await message.sendReply(Lang.NOT_FOUND);
-    }).catch((error => throw error.message));
+    }).catch(error => { throw error.message });
 }));
 
 Leon.addCommand({pattern: 'allvar ?(.*)', fromMe: true, desc: Lang.ALLVAR_DESC}, (async (message, match) => {
@@ -120,7 +120,7 @@ if (Config.WORKTYPE == 'private') {
                     Lang.DYNO_LEFT + ": ```{}```\n".format(secondsToHms(remaining)),
                     MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data
                })
-            }).catch((error => throw error.message));
+            }).catch(error => { throw error.message });
         });
     }));
 }
@@ -151,7 +151,7 @@ else if (Config.WORKTYPE == 'public') {
                     Lang.DYNO_LEFT + ": ```{}```\n".format(secondsToHms(remaining)),
                     MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data
                })
-            }).catch((error => throw error.message));
+            }).catch(error => { throw error.message });
         });
     }));
 }
