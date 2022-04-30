@@ -17,7 +17,7 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 Leon.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC}, (async (message, match) => {
-    if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_URL, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+    if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_URL, MessageType.text, { quoted: message.data });
     try {
         var url = new URL(match[1]);
     } catch {
@@ -69,23 +69,8 @@ Leon.addCommand({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC }, (asy
 }));
 
 Leon.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
-    if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_PLUGIN, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
+    if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_PLUGIN, MessageType.text, { quoted: message.data });
     if (!match[1].startsWith('__')) match[1] = '__' + match[1];
-    /*if (match[1].toLowerCase() === 'all') {
-       await Db.PluginDB.findAll().map((p) => {
-          await p[0].destroy();
-          delete require.cache[require.resolve('./' + p + '.js')]
-          fs.unlinkSync('./plugins/' + p + '.js');
-       });
-      await message.sendMessage(message.jid, "✅️ Successfully deleted all plugins!", MessageType.text);
-      await message.sendReply(NLang.AFTER_UPDATE);
-
-        console.log(baseURI);
-        await heroku.delete(baseURI + '/dynos').catch(async (error) => {
-            await message.sendReply(error.message);
-
-        });
-    }*/
     var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });
     if (plugin.length < 1) {
         return await message.sendReply(Lang.NOT_FOUND_PLUGIN);

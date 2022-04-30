@@ -118,7 +118,7 @@ if (Config.WORKTYPE == 'private') {
                     Lang.DYNO_USED + ": ```{}```\n".format(secondsToHms(quota_used)) +  
                     Lang.PERCENTAGE + ": ```{}```\n\n".format(percentage) +
                     Lang.DYNO_LEFT + ": ```{}```\n".format(secondsToHms(remaining)),
-                    MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data
+                    MessageType.text, { quoted: message.data
                })
             }).catch(error => { throw error.message });
         });
@@ -149,7 +149,7 @@ else if (Config.WORKTYPE == 'public') {
                     Lang.DYNO_USED + ": ```{}```\n".format(secondsToHms(quota_used)) +  
                     Lang.PERCENTAGE + ": ```{}```\n\n".format(percentage) +
                     Lang.DYNO_LEFT + ": ```{}```\n".format(secondsToHms(remaining)),
-                    MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data
+                    MessageType.text, { quoted: message.data
                })
             }).catch(error => { throw error.message });
         });
