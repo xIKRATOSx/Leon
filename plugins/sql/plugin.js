@@ -23,4 +23,4 @@ async function installPlugin(adres, file) {
         return await PluginDB.create({ url: adres, name: file });
     }
 }
-module.exports = { PluginDB: PluginDB, installPlugin: installPlugin };
+module.exports = { PlginDB: PluginDB, installPlugin: installPlugin };
