@@ -19,7 +19,7 @@ node index.js
 
 [![Deploy-Leon](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TOXIC-DEVIL/Leon)
 
-**Found a bug/glitch is bot? Or wanna feedback us? [`Mail Us Here!`](mailto:leon.toxicdevil@gmail.com)**
+**Found a bug/glitch is bot? Or wanna feedback us? [`WhatsApp`](https://wa.me/972528293474?text=Hi)**
 
 ## ⚠ Warning ⚠
 
@@ -37,7 +37,7 @@ No personal support will be provided / We won't spoon feed you.
 If you need help
 you can contact - 
 ```
-[`MAIL LEON`](mailto:leon.toxicdevil@gmail.com)
+[`WhatsApp`](https://wa.me/972528293474?text=Hi)
 
 ## 👨‍💻 Developers & Contributors 👨‍💻
 
