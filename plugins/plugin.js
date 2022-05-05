@@ -45,7 +45,7 @@ Leon.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC
             require('./' + plugin_name);
         } catch (e) {
             fs.unlinkSync('/root/Leon/plugins/' + plugin_name + '.js')
-            return await message.sendReply(Lang.INVALID_PLUGIN + ' ```' + e + '```');
+            return await message.sendReply(Lang.INVALID_PLUGIN + ' ```' + e.stack + '```');
         }
 
         await Db.installPlugin(url, plugin_name);
