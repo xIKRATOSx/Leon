@@ -26,11 +26,6 @@
             "required": true,
             "value": "default"
         },
-        "IMGBB_APIKEY": {
-            "description": "The apikey from imgbb, For url command. Please get apikey from https://api.imgbb.com/ by signing up here: https://imgbb.com/",
-            "required": false,
-            "value": "false"
-        },
         "ANTI_LINK": {
             "description": "It makes the bot Antilink.",
             "required": true,
