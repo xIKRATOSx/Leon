@@ -341,13 +341,17 @@ ${chalk.green.bold("🔄 Connecting...")}`);
         events.commands.map(
             async (command) =>  {
                 if (msg.message && msg.message.imageMessage && msg.message.imageMessage.caption) {
-                    var text_msg = msg.message.imageMessage.caption;
+                  var text_msg = msg.message.imageMessage.caption;
                 } else if (msg.message && msg.message.videoMessage && msg.message.videoMessage.caption) {
-                    var text_msg = msg.message.videoMessage.caption;
+                  var text_msg = msg.message.videoMessage.caption;
                 } else if (msg.message) {
-                    var text_msg = msg.message.extendedTextMessage === null ? msg.message.conversation : msg.message.extendedTextMessage.text;
+                  var text_msg = msg.message.extendedTextMessage === null ? msg.message.conversation : msg.message.extendedTextMessage.text;
+                } else if (msg.message && msg.message.buttonsResponseMessage.selectedButtonId) {
+                  var text_msg = msg.message.buttonsResponseMessage.selectedButtonId;
+                } else if (msg.message && msg.message.listResponseMessage.singleSelectReply.selectedRowId) {
+                  var text_msg = msg.message.listResponseMessage.singleSelectReply.selectedRowId;
                 } else {
-                    var text_msg = undefined;
+                  var text_msg = undefined
                 }
 
                 if ((command.on !== undefined && (command.on === 'image' || command.on === 'photo')
