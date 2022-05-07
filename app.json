@@ -31,6 +31,11 @@
             "required": true,
             "value": "false"
         },
+        "ANTI_VIRUS": {
+            "description": "It automatically removes/blocks participant/user who send virus.",
+            "required": true,
+            "value": "false"
+        },
         "ANTI_CALL": {
             "description": "It automatically blocks the user if they call ( WhatsApp Call ).",
             "required": true,
