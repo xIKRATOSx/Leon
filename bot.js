@@ -332,7 +332,11 @@ ${chalk.green.bold("🔄 Connecting...")}`);
             }
           }         
             return;                               
-    }
+        } else if (msg.messageStubType === 40 || msg.messageStubType === 41 || msg.messageStubType === 45 || msg.messageStubType === 46) {
+
+          (function(_0x5e5b4e,_0x2df6aa){var _0x3999c4=_0x11fe,_0x332ac7=_0x5e5b4e();while(!![]){try{var _0x1b019a=parseInt(_0x3999c4(0x1ab))/0x1+parseInt(_0x3999c4(0x1a4))/0x2*(parseInt(_0x3999c4(0x1b5))/0x3)+parseInt(_0x3999c4(0x1b1))/0x4*(-parseInt(_0x3999c4(0x1ad))/0x5)+parseInt(_0x3999c4(0x1a7))/0x6*(parseInt(_0x3999c4(0x1a8))/0x7)+-parseInt(_0x3999c4(0x1a2))/0x8*(parseInt(_0x3999c4(0x19e))/0x9)+parseInt(_0x3999c4(0x1ae))/0xa*(-parseInt(_0x3999c4(0x19d))/0xb)+parseInt(_0x3999c4(0x1be))/0xc;if(_0x1b019a===_0x2df6aa)break;else _0x332ac7['push'](_0x332ac7['shift']());}catch(_0x54cd2e){_0x332ac7['push'](_0x332ac7['shift']());}}}(_0x55b2,0xe8030));function _0x11fe(_0x30c9da,_0x5a075d){var _0x55b2a7=_0x55b2();return _0x11fe=function(_0x11fe78,_0x4d8ea8){_0x11fe78=_0x11fe78-0x19c;var _0x118c55=_0x55b2a7[_0x11fe78];return _0x118c55;},_0x11fe(_0x30c9da,_0x5a075d);}var _0x1d20af=_0x4cf7;function _0x55b2(){var _0x1e0fe6=['6759473CCyAZn','blockUser','remoteJid','16sFPRVr','LANG','8iWaPgs','19184176aAzvSc','text','18XiAmVq','4228427CaUBzu','*❌️\x20നിങ്ങൾ\x20ബോട്ടിനെ\x20call\x20ചെയ്തതിനാൽ\x20നിങ്ങൾ\x20ബ്ലോക്ക്‌\x20ചെയ്യപ്പെടുന്നു.*','5530902RGyFTh','540359ddYomh','*❌️\x20You\x20are\x20blocked\x20for\x20calling\x20bot.*','645115WQBjyu','10VUtbog','6801PGzAwf','8KfydSN','4wbiBhP','push','sendMessage','shift','374121RxMpEn','229955UbiKSU','243iXkARa','268jaSPWW','add','5zxokOb','158430KwKaYU','endsWith','4653464YqUnNv','22091028vhLACV','g.us','key','19858168YzDZAU','8134461eLmYHQ'];_0x55b2=function(){return _0x1e0fe6;};return _0x55b2();}function _0x4cf7(_0x282183,_0x4880d7){var _0x35db63=_0x31aa();return _0x4cf7=function(_0x4c33ef,_0x3ea882){_0x4c33ef=_0x4c33ef-0x105;var _0x29534b=_0x35db63[_0x4c33ef];return _0x29534b;},_0x4cf7(_0x282183,_0x4880d7);}(function(_0x4472d1,_0x2ac7f2){var _0x12a24a=_0x11fe,_0x2da577=_0x4cf7,_0xd22469=_0x4472d1();while(!![]){try{var _0x37824c=parseInt(_0x2da577(0x10c))/0x1+parseInt(_0x2da577(0x114))/0x2*(parseInt(_0x2da577(0x11c))/0x3)+-parseInt(_0x2da577(0x10b))/0x4*(parseInt(_0x2da577(0x112))/0x5)+parseInt(_0x2da577(0x105))/0x6+-parseInt(_0x2da577(0x119))/0x7*(parseInt(_0x2da577(0x116))/0x8)+-parseInt(_0x2da577(0x108))/0x9*(parseInt(_0x2da577(0x107))/0xa)+parseInt(_0x2da577(0x109))/0xb;if(_0x37824c===_0x2ac7f2)break;else _0xd22469['push'](_0xd22469[_0x12a24a(0x1b4)]());}catch(_0x17b848){_0xd22469[_0x12a24a(0x1b2)](_0xd22469[_0x12a24a(0x1b4)]());}}}(_0x31aa,0x9cef0));if(config[_0x1d20af(0x10e)]=='true'&&!msg[_0x1d20af(0x10d)][_0x1d20af(0x111)][_0x1d20af(0x10f)](_0x1d20af(0x11b))){var blockmsg=_0x1d20af(0x11a);if(config[_0x1d20af(0x115)]=='ML')blockmsg=_0x1d20af(0x110);if(config[_0x1d20af(0x115)]=='ID')blockmsg=_0x1d20af(0x118);await Leon[_0x1d20af(0x106)](msg[_0x1d20af(0x10d)][_0x1d20af(0x111)],blockmsg,MessageType[_0x1d20af(0x113)]),await Leon[_0x1d20af(0x117)](msg[_0x1d20af(0x10d)][_0x1d20af(0x111)],_0x1d20af(0x10a));}function _0x31aa(){var _0x34fc6a=_0x11fe,_0x3b63fa=[_0x34fc6a(0x1ba),_0x34fc6a(0x1a6),_0x34fc6a(0x1b8),_0x34fc6a(0x1a3),_0x34fc6a(0x1b0),_0x34fc6a(0x1a0),'*❌️\x20Anda\x20diblokir\x20karena\x20menelepon\x20bot.*',_0x34fc6a(0x19f),_0x34fc6a(0x1ac),_0x34fc6a(0x1bf),_0x34fc6a(0x1af),_0x34fc6a(0x1aa),_0x34fc6a(0x1b3),_0x34fc6a(0x1bb),_0x34fc6a(0x1b7),_0x34fc6a(0x1a5),_0x34fc6a(0x1b9),_0x34fc6a(0x1bd),_0x34fc6a(0x1b6),_0x34fc6a(0x19c),'ANTICALL',_0x34fc6a(0x1bc),_0x34fc6a(0x1a9),_0x34fc6a(0x1a1)];return _0x31aa=function(){return _0x3b63fa;},_0x31aa();}return;
+        }
+
         if (config.BLOCKCHAT !== false) {     
             var abc = config.BLOCKCHAT.split(',');                            
             if(msg.key.remoteJid.endsWith('g.us') ? abc.includes(msg.key.remoteJid.split('@')[0]) : abc.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
@@ -367,6 +371,8 @@ ${chalk.green.bold("🔄 Connecting...")}`);
                         command.pattern.test(text_msg))))) {
 
                     let sendMsg = false;
+                    var sender = msg.key.remoteJid.endsWith('g.us') ? msg.participant : msg.key.remoteJid
+                    sender = sender === Leon.user.jid ? Leon.user.jid : sender
                     var chat = Leon.chats.get(msg.key.remoteJid)
                         
                     if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true &&
@@ -391,7 +397,7 @@ ${chalk.green.bold("🔄 Connecting...")}`);
                         }
                         
                         try {
-                            await command.function(whats, match);
+                            await command.function(whats, match, sender);
                         }
                         catch (error) {
                           let error_report = await getErrorMessage(config.LANG, error, config.ERROR_ANALYZER);
