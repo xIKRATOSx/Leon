@@ -26,11 +26,6 @@
             "required": true,
             "value": "default"
         },
-        "ANTI_DELETE": {
-            "description": "It sends the deleted message.",
-            "required": true,
-            "value": "false"
-        },
         "ANTI_LINK": {
             "description": "It makes the bot Antilink.",
             "required": true,
