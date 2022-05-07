@@ -339,6 +339,8 @@ ${chalk.green.bold("🔄 Connecting...")}`);
             if(msg.key.remoteJid.endsWith('g.us') ? abc.includes(msg.key.remoteJid.split('@')[0]) : abc.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
         }
 
+        var _0xd3f9=["\x74\x6F\x4C\x6F\x77\x65\x72\x43\x61\x73\x65","\x43\x48\x41\x54\x4D\x4F\x44\x45","\x70\x63","\x70\x72\x69\x76\x61\x74\x65\x20\x63\x68\x61\x74","\x70\x72\x69\x76\x61\x74\x65\x20\x63\x68\x61\x74\x73","\x67\x2E\x75\x73","\x65\x6E\x64\x73\x57\x69\x74\x68","\x72\x65\x6D\x6F\x74\x65\x4A\x69\x64","\x6B\x65\x79","\x67\x63","\x67\x72\x6F\x75\x70\x20\x63\x68\x61\x74","\x67\x72\x6F\x75\x70\x73","\x67\x72\x6F\x75\x70\x20\x63\x68\x61\x74\x73"];let cm=config[_0xd3f9[1]][_0xd3f9[0]]();if(cm== _0xd3f9[2]|| cm== _0xd3f9[3]|| cm== _0xd3f9[4]){if(msg[_0xd3f9[8]][_0xd3f9[7]][_0xd3f9[6]](_0xd3f9[5])){return}}else {if(cm== _0xd3f9[9]|| cm== _0xd3f9[10]|| cm== _0xd3f9[11]|| cm== _0xd3f9[12]){if(!msg[_0xd3f9[8]][_0xd3f9[7]][_0xd3f9[6]](_0xd3f9[5])){return}}}
+
         events.commands.map(
             async (command) =>  {
                 if (msg.message && msg.message.imageMessage && msg.message.imageMessage.caption) {
