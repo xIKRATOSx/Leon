@@ -31,6 +31,11 @@
             "required": true,
             "value": "false"
         },
+        "ANTI_CALL": {
+            "description": "It automatically blocks the user if they call ( WhatsApp Call ).",
+            "required": true,
+            "value": "false"
+        },
         "ANTI_SPAM": {
             "description": "It automatically detects whether the message is spamming and removes them if they.",
             "required": true,
