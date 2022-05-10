@@ -207,7 +207,7 @@ Leon.addCommand({pattern: 'minion ?(.*)', fromMe: td, dontAddCommandList: true},
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 }));
 
 Leon.addCommand({pattern: 'holographic ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
