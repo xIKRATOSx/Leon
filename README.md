@@ -19,6 +19,8 @@ node index.js
 
 [![Deploy-Leon](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TOXIC-DEVIL/Leon)
 
+> [Leon Installation Tutorial](https://youtu.be/eZ3xhIWnuyY)
+
 **Found a bug/glitch is bot? Or wanna feedback us? [`WhatsApp`](https://wa.me/919747867484?text=Hi)**
 
 ## ⚠ Warning ⚠
