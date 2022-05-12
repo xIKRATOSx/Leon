@@ -21,7 +21,7 @@ node index.js
 
 > [Leon Installation Tutorial](https://youtu.be/eZ3xhIWnuyY)
 
-**Found a bug/glitch is bot? Or wanna feedback us? [`WhatsApp`](https://wa.me/919747867484?text=Hi)**
+**Found a bug/glitch in bot? Or wanna feedback us? [`WhatsApp`](https://wa.me/919747867484?text=Hi)**
 
 ## ⚠ Warning ⚠
 
