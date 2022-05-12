@@ -3,16 +3,22 @@
 
 ## ⚙️ Setup ⚙️
 
+### Multi line:
 ```
-pkg install git
-pkg install nodejs
-git clone https://github.com/TOXIC-DEVIL/Leon
-cd Leon
-npm i @adiwajshing/baileys
-npm i chalk
-node index.js
+> pkg install git -y
+> pkg install nodejs -y
+> git clone https://github.com/TOXIC-DEVIL/Leon
+> cd Leon
+> npm install @adiwajshing/baileys
+> npm install chalk
+> node index.js
 ```
-  
+
+### Single line:
+```
+> pkg install git -y && pkg install nodejs -y && git clone https://github.com/TOXIC-DEVIL/Leon && cd Leon && npm install @adiwajshing/baileys && npm install chalk && node index.js
+```
+
 ## 💫 Deploy & Run Leon 💫
 
 [![Run on Repl.it](https://repl.it/badge/github/TOXIC-DEVIL/WhatsApp-Bot)](https://replit.com/@TOXICDEVIL/Leon)
