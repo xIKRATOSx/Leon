@@ -62,7 +62,7 @@ Leon.addCommand({pattern: 'snow ?(.*)', fromMe: td, dontAddCommandList: true}, (
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 
 }));
 
@@ -75,7 +75,7 @@ Leon.addCommand({pattern: 'cloud ?(.*)', fromMe: td, dontAddCommandList: true}, 
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 }));
 
 Leon.addCommand({pattern: 'luxury ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
@@ -87,7 +87,7 @@ Leon.addCommand({pattern: 'luxury ?(.*)', fromMe: td, dontAddCommandList: true},
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 }));
 
 Leon.addCommand({pattern: 'gradient ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
@@ -99,7 +99,7 @@ Leon.addCommand({pattern: 'gradient ?(.*)', fromMe: td, dontAddCommandList: true
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 }));
 
 Leon.addCommand({pattern: 'sky ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
@@ -111,7 +111,7 @@ Leon.addCommand({pattern: 'sky ?(.*)', fromMe: td, dontAddCommandList: true}, (a
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 }));
 
 Leon.addCommand({pattern: 'blackpink ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
@@ -135,7 +135,7 @@ Leon.addCommand({pattern: 'beach ?(.*)', fromMe: td, dontAddCommandList: true}, 
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 }));
 
 Leon.addCommand({pattern: 'sand ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
@@ -147,7 +147,7 @@ Leon.addCommand({pattern: 'sand ?(.*)', fromMe: td, dontAddCommandList: true}, (
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 }));
 
 Leon.addCommand({pattern: 'engraved ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
@@ -159,7 +159,7 @@ Leon.addCommand({pattern: 'engraved ?(.*)', fromMe: td, dontAddCommandList: true
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 }));
 
 Leon.addCommand({pattern: 'glue ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
@@ -171,7 +171,7 @@ Leon.addCommand({pattern: 'glue ?(.*)', fromMe: td, dontAddCommandList: true}, (
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 }));
 
 Leon.addCommand({pattern: 'metal ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
@@ -183,7 +183,7 @@ Leon.addCommand({pattern: 'metal ?(.*)', fromMe: td, dontAddCommandList: true}, 
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 }));
 
 Leon.addCommand({pattern: 'galaxy ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
@@ -195,7 +195,7 @@ Leon.addCommand({pattern: 'galaxy ?(.*)', fromMe: td, dontAddCommandList: true},
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 }));
 
 Leon.addCommand({pattern: 'minion ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
@@ -219,7 +219,7 @@ Leon.addCommand({pattern: 'holographic ?(.*)', fromMe: td, dontAddCommandList: t
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 }));
 
 Leon.addCommand({pattern: 'glossy ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
@@ -231,7 +231,7 @@ Leon.addCommand({pattern: 'glossy ?(.*)', fromMe: td, dontAddCommandList: true},
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 }));
 
 Leon.addCommand({pattern: 'fabric ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
@@ -243,7 +243,7 @@ Leon.addCommand({pattern: 'fabric ?(.*)', fromMe: td, dontAddCommandList: true},
     } catch (e) {
       return await message.sendReply(ERROR);
     }
-    await message.sendReply(Buffer.from(webimage.data), '');
+    await message.sendImage(Buffer.from(webimage.data), '');
 
 }));
 
