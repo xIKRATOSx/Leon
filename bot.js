@@ -309,10 +309,12 @@ ${chalk.green.bold("🔄 Connecting...")}`);
                   try { pp = await Leon.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await Leon.getProfilePicture(); }
                    var json = await Leon.groupMetadata(msg.key.remoteJid)
                    await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
-                   await Leon.sendMessage(msg.key.remoteJid, res.data, MessageType.image, { mimetype: Mimetype.png, caption:  gb.message.replace('@user', '@' + msg.messageStubParameters[0].split('@')[0]).replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name) }); });   
+                   let mention = '@' + msg.messageStubParameters[0].split('@')[0]
+                   await Leon.sendMessage(msg.key.remoteJid, res.data, MessageType.image, { mimetype: Mimetype.png, caption:  gb.message.replace('@user', mention).replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name), contextInfo: { mentionedJid: mention }, previewType: 0 }); });   
                 } else {
                    var json = await Leon.groupMetadata(msg.key.remoteJid)
-                   await Leon.sendMessage(msg.key.remoteJid, gb.message.replace('@user', '@' + msg.messageStubParameters[0].split('@')[0]).replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name), MessageType.text);   
+                   let mention = '@' + msg.messageStubParameters[0].split('@')[0]
+                   await Leon.sendMessage(msg.key.remoteJid, gb.message.replace('@user', mention).replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name), MessageType.text, { contextInfo: { mentionedJid: mention }, previewType: 0 });
             }
           }  
             return;
@@ -325,10 +327,12 @@ ${chalk.green.bold("🔄 Connecting...")}`);
                   try { pp = await Leon.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await Leon.getProfilePicture(); }
                    var json = await Leon.groupMetadata(msg.key.remoteJid)
                    await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
-                   await Leon.sendMessage(msg.key.remoteJid, res.data, MessageType.image, { mimetype: Mimetype.png, caption:  gb.message.replace('@user', '@' + msg.messageStubParameters[0].split('@')[0]).replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name) }); });   
+                   let mention = '@' + msg.messageStubParameters[0].split('@')[0]
+                   await Leon.sendMessage(msg.key.remoteJid, res.data, MessageType.image, { mimetype: Mimetype.png, caption:  gb.message.replace('@user', mention).replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name), contextInfo: { mentionedJid: mention }, previewType: 0 }); });   
                 } else {
                    var json = await Leon.groupMetadata(msg.key.remoteJid)
-                   await Leon.sendMessage(msg.key.remoteJid, gb.message.replace('@user', '@' + msg.messageStubParameters[0].split('@')[0]).replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name), MessageType.text);   
+                   let mention = '@' + msg.messageStubParameters[0].split('@')[0]
+                   await Leon.sendMessage(msg.key.remoteJid, gb.message.replace('@user', mention).replace('{pp}', '').replace('{gcname}', json.subject).replace('{gcowner}', json.owner).replace('{gcdesc}', json.desc).replace('{owner}', Leon.user.name), MessageType.text, { contextInfo: { mentionedJid: mention }, previewType: 0 });
             }
           }         
             return;                               
@@ -363,7 +367,6 @@ ${chalk.green.bold("🔄 Connecting...")}`);
                         command.pattern.test(text_msg)))) || 
                     (command.pattern !== undefined && command.pattern.test(text_msg)) || 
                     (command.on !== undefined && command.on === 'text' && text_msg) ||
-                    // Video
                     (command.on !== undefined && (command.on === 'video')
                     && msg.message && msg.message.videoMessage !== null && 
                     (command.pattern === undefined || (command.pattern !== undefined && 
