@@ -7,7 +7,7 @@ let TLang = Language.getString('tagall');
 let FLang = Language.getString('filters');
 let Lang = Language.getString('admin');
 let PLang = Language.getString('profile');
-let td = Config.WORKTYPE == 'private' ? true : false;
+let td = true; // Config.WORKTYPE == 'private' ? true : false;
 
 async function checkAdmin(message, user = message.client.user.jid, jid = message.jid) {
     var grup = await message.client.groupMetadata(jid);
