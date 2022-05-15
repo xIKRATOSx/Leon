@@ -398,7 +398,7 @@
              "CARBON_NEEDWORD": "*Ko si awọn ariyanjiyan ti o to lati tumọ Ọrọ-si-Aworan!*\nApeere: ```#idanwo erogba```\nApeere: ```#sise erogba #idanwo```,
              "CARBON_WARN": "Jọ̀wọ́ tẹ ẹ̀dà en àti tr nìkan!"
          },
-         ttp: {
+         "ttp": {
              "TTP_DESC": "Ṣíṣe àyípadà ọ̀rọ̀ sí àwòrán títọ́.",
              "EMOJI_DESC": "Ṣiyipada Emoji Si Aworan ( Png ).",
              "QR_DESC": "O Yi ọrọ pada si koodu Qr",
