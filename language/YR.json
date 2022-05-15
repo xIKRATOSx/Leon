@@ -395,7 +395,7 @@
          },
          "erogba": {
              "CARBON_DESC": "Nlo carbon.sh fun Ọrọ-si-Aworan",
-             "CARBON_NEEDWORD": "*Ko si awọn ariyanjiyan ti o to lati tumọ Ọrọ-si-Aworan!*\nApeere: ```#idanwo erogba```\nApeere: ```#sise erogba #idanwo```,
+             "CARBON_NEEDWORD": "*Ko si awọn ariyanjiyan ti o to lati tumọ Ọrọ-si-Aworan!*\nApeere: ```#carbon test```",
              "CARBON_WARN": "Jọ̀wọ́ tẹ ẹ̀dà en àti tr nìkan!"
          },
          "ttp": {
