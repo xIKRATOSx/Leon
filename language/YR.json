@@ -111,7 +111,7 @@
              "STOP_DESC": "Duro àlẹmọ ti o fi kun tẹlẹ.",
              "NEED_FILTER": "*❌ Jọwọ tẹ àlẹmọ kan!*\n*Apẹẹrẹ:*",
              "ALREADY_NO_FILTER": "*❌ Ko si àlẹmọ bi eleyi!*",
-             "PAArẹ": "*✅ A ti pa àlẹmọ naa ni aṣeyọri!"*"
+             "PAArẹ": "*✅ A ti pa àlẹmọ naa ni aṣeyọri!*"
          },
          "Ẹ kí": {
              "WELCOME_DESC": "O ṣeto ifiranṣẹ itẹwọgba. Ti o ba fi silẹ ni ofifo yoo fihan ifiranṣẹ itẹwọgba.",
@@ -212,7 +212,7 @@
              "TAGADMİN": "Tags awọn alakoso ẹgbẹ.",
              "ADMİN": "*Emi ki i se alabojuto ninu egbe yi!*",
              "SCAN": "Ṣayẹwo boya nọmba ti a fi fun wa ni iforukọsilẹ ni WhatsApp.",
-             "NO": "*O gbọ́dọ̀ tẹ nọ́mbà Fóònù kan síi!*\n*Apẹẹrẹ:* ```#scan 9199xxxx```,
+             "NO": "*O gbọ́dọ̀ tẹ nọ́mbà Fóònù kan síi!*\n*Apẹẹrẹ:* ```#scan 234905xxxxxxxx```",
              "SUC": "*Eniyan ti a ni nọmba n lo WhatsApp! ✅*",
              "UNSUC": "*Eniyan ti a ni nọmba ko lo WhatsApp! ❌*"
          },
@@ -251,7 +251,7 @@
              "SR": "Ilaorun",
              "SS": "Iwọ-oorun",
              "TZ": "Aago",
-             "NOT_FOUND": "``N ko le ri ilu kan pẹlu orukọ yi. 😖``"
+             "NOT_FOUND": "```N ko le ri ilu kan pẹlu orukọ yi. 😖```"
          },
          "ayelujara": {
              "SPEEDTEST_DESC": "Iwọn Gbigbasilẹ ati Iyara Gbigbe.",
@@ -414,7 +414,7 @@
              "LİNK": "O gbọdọ tẹ ọna asopọ!"
          },
          "ohun": {
-             "NEED_REPLY": "``" Jọwọ fesi si eyikeyi ifiranṣẹ!```",
+             "NEED_REPLY": "```Jọwọ fesi si eyikeyi ifiranṣẹ!```",
              "ONLY_AUDIO":" ```Fáìlì olohun nìkan ni a gba.```",
              "USAGE": "O ṣe iyipada ohun si ọrọ.",
              "TEXT": "*Hey! Mo tẹtisi ohun yii ni ikoko mo si gbọ wọn!:* \n\n"
@@ -447,7 +447,7 @@
          },
          "github": {
              "GİTHUB_DESC": "Kojo alaye github lati oruko olumulo ti a fun.\n⌨️ Apeere: .github TOXIC-DEVIL",
-             "REPLY": "``"O Nilo Lati Tẹ Orukọ olumulo eyikeyi!```",
+             "REPLY": "```O Nilo Lati Tẹ Orukọ olumulo eyikeyi!```",
              "NOT": "```A ko ri olumulo!```",
              "ÀWỌN OLÓṢẸ́": "Àwọn ọmọlẹ́yìn:",
              "ORUKO": "Orukọ:",
