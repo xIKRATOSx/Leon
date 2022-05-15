@@ -1,7 +1,7 @@
 {
-     "LANGUAGE": "English",
-     "LANGCODE": "en",
-     "AUTHOR": "Philip-Smith",
+     "LANGUAGE": "Yoruba",
+     "LANGCODE": "yr",
+     "AUTHOR": "Philip Smith",
      "OKUN": {
          "akojọ": {
              "Àṣẹ": "Àṣẹ",
@@ -110,7 +110,7 @@
              "FILTERED": "*✅ Ṣeto rere* ```{}``` *lati ṣe àlẹmọ!*",
              "STOP_DESC": "Duro àlẹmọ ti o fi kun tẹlẹ.",
              "NEED_FILTER": "*❌ Jọwọ tẹ àlẹmọ kan!*\n*Apẹẹrẹ:*",
-             "ALREADY_NO_FILTER": "*❌ Ko si àlẹmọ bi eleyi!"*",
+             "ALREADY_NO_FILTER": "*❌ Ko si àlẹmọ bi eleyi!*",
              "PAArẹ": "*✅ A ti pa àlẹmọ naa ni aṣeyọri!"*"
          },
          "Ẹ kí": {
@@ -168,7 +168,7 @@
          "awọn apanirun": {
              "TRANSLATE_DESC": "O tumọ pẹlu Google Tumọ. O gbọdọ fesi eyikeyi ifiranṣẹ.",
              "TRANSLATE_USAGE": ".trt tr it (Lati Turki si Itali)",
-             "NEED_REPLY": "``" Jọwọ fesi si eyikeyi ifiranṣẹ!```",
+             "NEED_REPLY": "```Jọwọ fesi si eyikeyi ifiranṣẹ!```",
              "LANG": "Ede",
              "LATI": "Ede Tumọ",
              "ReSULT": "Túmọ̀",
@@ -190,7 +190,7 @@
              "FIDIO_IGBAGBỌ": "*⦁══════📽═══════════⦁*\n``` Gbigbe fidio re sile...```\n*╦═════════  ═══⦁*",
              "FIDIO_IRUKO": "*⦁══════📽═══════════════⦁*\n```Ṣirùsókè fidio rẹ...```\n*╦══════════  ═══⦁*",
              "YT_DESC": "O wa lori YouTube.",
-             "NEED_WORDS": "``" Jọwọ kọ ọrọ diẹ!```",
+             "NEED_WORDS": "```Jọwọ kọ ọrọ diẹ!```",
              "GETTING_VIDEOS": " ```Mo nmu fidio wa...```",
              "NOT_FOUND": "*Nko ri nkankan :(*",
              "ṢIwadi": "* 🔎 Ṣiṣawari...*",
@@ -201,7 +201,7 @@
          "sitika": {
              "STICKER_DESC": "O ṣe iyipada fọto ti o dahun tabi fidio si sitika.",
              "NEED_REPLY": "*Fesi aworan tabi fidio!*",
-             "ÌṢIKỌ̀LỌ́YÌSÍ": " ```Ìgbàsílẹ̀ Media & yíyí padà sí ilẹ̀mọ́...```
+             "ÌṢIKỌ̀LỌ́YÌSÍ": "```Ìgbàsílẹ̀ Media & yíyí padà sí ilẹ̀mọ́...```"
          },
          "system_stats": {
              "ALIVE_DESC": "Ṣe bot ṣiṣẹ bi?",
