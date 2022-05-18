@@ -4,8 +4,8 @@
     "logo": "https://i.ibb.co/d7DLjJZ/tdtod.jpg",
     "keywords": ["whatsapp", "simi", "Leon", "Bot", "bot", "api", "ai"],
     "repository": "https://github.com/TOXIC-DEVIL/Leon",
-    "website":   "https://api-toxic-devil.herokuapp.com/",
-    "success_url": "https://api-toxic-devil.herokuapp.com/",
+    "website":   "https://api-toxic-devil-production.up.railway.app/",
+    "success_url": "https://api-toxic-devil-production.up.railway.app/",
     "stack": "container",
     "env": {
         "LEON_SESSION": {
