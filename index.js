@@ -3,24 +3,24 @@ const {WAConnection} = require('@adiwajshing/baileys');
 const {StringSession} = require('./leon/');
 const fs = require('fs');
 
-async function start() {
-    const conn = new WAConnection();
+async function startLeon() {
+    const Leon = new WAConnection();
     const Session = new StringSession();
-    conn.version = [3, 3430, 9]
-    conn.logger.level = 'warn';
-    conn.regenerateQRIntervalMs = 50000;
+    Leon.version = [3, 3430, 9]
+    Leon.logger.level = 'warn';
+    Leon.regenerateQRIntervalMs = 50000;
     
-    conn.on('connecting', async () => {
+    Leon.on('connecting', async () => {
         console.log(`${chalk.green.bold('Leon')}
 ${chalk.white.italic('Made By ')}${chalk.red.bold('TOXIC DEVIL')}
 ${chalk.blue.italic('🔄 Loading QR CODE...')}`);
     });
     
 
-    conn.on('open', () => {
-        var st = Session.createStringSession(conn.base64EncodedAuthInfo());
+    Leon.on('open', () => {
+        var st = Session.createStringSession(Leon.base64EncodedAuthInfo());
         console.log(
-            chalk.green.bold('YOUR SESSION: '), Session.createStringSession(conn.base64EncodedAuthInfo())
+            chalk.green.bold('YOUR SESSION: '), Session.createStringSession(Leon.base64EncodedAuthInfo())
         );
         
         if (!fs.existsSync('config.env')) {
@@ -36,7 +36,7 @@ ${chalk.blue.italic('🔄 Loading QR CODE...')}`);
         process.exit(0);
     });
 
-    await conn.connect();
+    await Leon.connect();
 }
 
-start()
+startLeon()
