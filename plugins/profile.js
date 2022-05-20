@@ -18,7 +18,7 @@ var N_LINK = "Link"
 var COUNTRY = "Country"
 var ABOUT_DESC = "Changes your about with entered text."
 var NEED_ABOUT = "*You must enter an about to set!*"
-var SUC = "*✅️ Successfully set about to:*\n"
+var SUC_ABOUT = "*✅️ Successfully set about to:*\n"
 var NAME_DESC = "Changes your name with entered text."
 var NEED_NAME = "*You must enter an name to set!*"
 var SUC = "*✅️ Successfully set name to:*\n"
@@ -27,7 +27,7 @@ var MAX = "*Entered name is too lengthy!*\n```Maximum 25 characters only.```"
 var MAX = "*Entered about length is too long!*\n```Maximum 138 characters only.```"
 var UNK = "Unknown"
 if (Config.LANG == 'ML') LEAVE_SUC = "*☑️ വിജയകരമായി ഗ്രൂപ്പിൽ നിന്ന് പുറത്തായി!*", PROFILE_DESC = "മെൻഷൻ ചെയ്തതോ മറുപടി ആയി നൽകിയതോ ആയ ഉപയോക്താവിന്റെ WhatsApp വിവരങ്ങൾ ലഭ്യമാക്കുന്നു.", NEED_USER = "*നിങ്ങൾ ഏതെങ്കിലും ഉപയോക്താവിന്റെ സന്ദേശത്തെ മെൻഷൻ ചെയ്യുകയോ മറുപടി നൽകുകയോ ചെയ്യണം!*", NAME = "പേര്", ABOUT = "എബൌട്ട്‌", NUMBER = "നമ്പർ", N_LINK = "ലിങ്ക്", COUNTRY = "രാജ്യം", UNK = "അജ്ഞാതം", FETCHING = "വിവരങ്ങൾ ലഭ്യമാക്കുന്നു", FETCHINGPM = "വിവരങ്ങൾ ലഭ്യമാക്കുന്നു", ABOUT_DESC = "നൽകിയ ടെക്‌സ്‌റ്റ് ഉപയോഗിച്ച് നിങ്ങളുടെ എബൌട്ട്‌ മാറ്റുന്നു.", NEED_ABOUT = "*നിങ്ങൾ സജ്ജീകരിക്കാൻ പോകുന്ന എബൌട്ട്‌ നൽകണം!*", SUC = "*✅️ വിജയകരമായി സജ്ജീകരിച്ചിരിച്ചു:*\n", MAX = "*നൽകിയ എബൌട്ട്‌ ദൈർഘ്യമേറിയതാണ്!*\n```പരമാവധി 138 പ്രതീകങ്ങൾ മാത്രം.```", ABOUT_DESC = "നൽകിയ ടെക്‌സ്‌റ്റ് ഉപയോഗിച്ച് നിങ്ങളുടെ പേര് മാറ്റുന്നു.", NEED_ABOUT = "*നിങ്ങൾ സജ്ജീകരിക്കാൻ പോകുന്ന പേര് നൽകണം!*", SUC = "*✅️ വിജയകരമായി സജ്ജീകരിച്ചിരിച്ചു:*\n", MAX = "*നൽകിയ പേര് ദൈർഘ്യമേറിയതാണ്!*\n```പരമാവധി 25 പ്രതീകങ്ങൾ മാത്രം.```"
-if (Config.LANG == 'ID') LEAVE_SUC = "*☑️ Berhasil keluar dari grup!*", PROFILE_DESC = "Mengambil informasi WhatsApp pengguna yang disebutkan atau dibalas.", NEED_USER = "*Anda harus menyebutkan atau membalas pesan pengguna mana pun!*", NAME = "Nama", ABOUT = "Tentang", NUMBER = "Nomor", N_LINK = "Tautan", COUNTRY = "Negara", UNK = "Tidak dikenal", FETCHING = "Mengambil informasi dari", FETCHINGPM = "Mengambil informasi", ABOUT_DESC = "ubah tentang anda dengan teks yang dimasukkan.", NEED_ABOUT = "*Anda harus memasukkan tentang untuk mengatur!*", SUC = "*✅️ Berhasil mengatur tentang:*\n", MAX = "*Tentang panjang yang dimasukkan terlalu panjang!*\n```Maksimum 138 karakter saja.```", ABOUT_DESC = "ubah tentang anda dengan teks yang dimasukkan.", NEED_ABOUT = "*Anda harus memasukkan nama untuk mengatur!*", SUC = "*✅️ Berhasil mengatur nama:*\n", MAX = "*Nama panjang yang dimasukkan terlalu panjang!*\n```Maksimum 25 karakter saja.```"
+if (Config.LANG == 'ID') LEAVE_SUC = "*☑️ Berhasil keluar dari grup!*", PROFILE_DESC = "Mengambil informasi WhatsApp pengguna yang disebutkan atau dibalas.", NEED_USER = "*Anda harus menyebutkan atau membalas pesan pengguna mana pun!*", NAME = "Nama", ABOUT = "Tentang", NUMBER = "Nomor", N_LINK = "Tautan", COUNTRY = "Negara", UNK = "Tidak dikenal", FETCHING = "Mengambil informasi dari", FETCHINGPM = "Mengambil informasi", ABOUT_DESC = "ubah tentang anda dengan teks yang dimasukkan.", NEED_ABOUT = "*Anda harus memasukkan tentang untuk mengatur!*", SUC_ABOUT = "*✅️ Berhasil mengatur tentang:*\n", MAX = "*Tentang panjang yang dimasukkan terlalu panjang!*\n```Maksimum 138 karakter saja.```", ABOUT_DESC = "ubah tentang anda dengan teks yang dimasukkan.", NEED_ABOUT = "*Anda harus memasukkan nama untuk mengatur!*", SUC = "*✅️ Berhasil mengatur nama:*\n", MAX = "*Nama panjang yang dimasukkan terlalu panjang!*\n```Maksimum 25 karakter saja.```"
 
 Leon.addCommand({pattern: 'leave ?(.*)', fromMe: true, desc: Lang.KICKME_DESC}, (async (message, match) => {
 
@@ -36,7 +36,7 @@ function _0xec90(_0x480b22,_0x480df1){var _0x4ee3fe=_0x4ee3();return _0xec90=fun
 
 Leon.addCommand({pattern: 'about ?(.*)', fromMe: true, desc: ABOUT_DESC}, (async (message, match) => {
 
-var _0xed1d=["","\x73\x65\x6E\x64\x52\x65\x70\x6C\x79","\x6C\x65\x6E\x67\x74\x68","\x73\x65\x74\x53\x74\x61\x74\x75\x73","\x63\x6C\x69\x65\x6E\x74","\x60\x60\x60"];if(match[1]=== _0xed1d[0]){return  await message[_0xed1d[1]](NEED_ABOUT)};if(match[1][_0xed1d[2]]> 138){return  await message[_0xed1d[1]](MAX)};try{ await message[_0xed1d[4]][_0xed1d[3]](match[1]); await message[_0xed1d[1]](SUC+ _0xed1d[5]+ match[1]+ _0xed1d[5])}catch(e){throw e}
+var _0xed1d=["","\x73\x65\x6E\x64\x52\x65\x70\x6C\x79","\x6C\x65\x6E\x67\x74\x68","\x73\x65\x74\x53\x74\x61\x74\x75\x73","\x63\x6C\x69\x65\x6E\x74","\x60\x60\x60"];if(match[1]=== _0xed1d[0]){return  await message[_0xed1d[1]](NEED_ABOUT)};if(match[1][_0xed1d[2]]> 138){return  await message[_0xed1d[1]](MAX)};try{ await message[_0xed1d[4]][_0xed1d[3]](match[1]); await message[_0xed1d[1]](SUC_ABOUT+ _0xed1d[5]+ match[1]+ _0xed1d[5])}catch(e){throw e}
 }));
 
 Leon.addCommand({pattern: 'name ?(.*)', fromMe: true, desc: NAME_DESC}, (async (message, match) => {
