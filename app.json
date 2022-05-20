@@ -31,6 +31,11 @@
             "required": true,
             "value": "false"
         },
+        "FULL_ACO": {
+            "description": "It enables aco ai chatbot. The chatbot will start working if someone mention you or reply to any message sent by you/bot.",
+            "required": true,
+            "value": "false"
+        },
         "CHAT_MODE": {
             "description": "If you type false, the bot will works in both group and private chats. Else if you type 'pc', the bot will only work in private chats. Else if you type 'gc', the bot will only works in group chats.",
             "required": true,
