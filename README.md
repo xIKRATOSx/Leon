@@ -27,7 +27,7 @@ $ pkg install git -y && pkg install nodejs -y && git clone https://github.com/TO
 
 > [Leon Installation Tutorial](https://youtu.be/eZ3xhIWnuyY)
 
-**Found a bug/glitch in bot? Or wanna feedback us? [`WhatsApp`](https://wa.me/919747867484?text=Hi)**
+**Found a bug/glitch in bot? Or wanna feedback us? [`WhatsApp`](https://wa.me/918595651408?text=Hi)**
 
 ## ⚠ Warning ⚠
 
@@ -45,7 +45,7 @@ No personal support will be provided / We won't spoon feed you.
 If you need help
 you can contact - 
 ```
-[`WhatsApp`](https://wa.me/919747867484?text=Hi)
+[`WhatsApp`](https://wa.me/918595651408?text=Hi)
 
 ## 👨‍💻 Developers & Contributors 👨‍💻
 
