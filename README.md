@@ -58,6 +58,6 @@ Author: Developer, Base, Bug Fixes, Commits, Modules |
 
 - **[Adiwajshing](https://github.com/Adiwajshing) for [`Baileys`](https://github.com/adiwajshing/Baileys)**
 
-- **[TOXIC DEVIL](https://github.com/TOXIC-DEVIL) for [`TOXIC DEVIL API - FREE REST API`](https://api-toxic-devil-production.up.railway.app/)**
+- **[TOXIC DEVIL](https://github.com/TOXIC-DEVIL) for [`TOXIC DEVIL API - FREE REST API`](https://api-toxic-devil.herokuapp.com/)**
 
 - **And all.**
