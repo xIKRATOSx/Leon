@@ -4,7 +4,7 @@
   "description": "A Simple WhatsApp Bot.",
   "main": "./Leon/bot.js",
   "scripts": {
-    "start": "supervisor -s bot.js"
+    "start": "node bot.js"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
     "dotenv": "8.2.0",
     "request": "2.88.2",
     "cookie": "^0.5.0",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "fluent-ffmpeg": "^2.1.2",
     "form-data": "^4.0.0",
     "g-i-s": "^2.1.6",
@@ -57,8 +58,6 @@
     "sozlukjs": "^1.1.0",
     "sqlite3": "5.0.3",
     "translatte": "^3.0.0",
-    "wikijs": "^6.0.1", 
-    "yt-search": "^2.7.4",
-    "ytdl-core": "^4.8.3"
+    "wikijs": "^6.0.1"
   }
 }
