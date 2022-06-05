@@ -4,13 +4,6 @@ let fs = require('fs');
 let got = require('got');
 let Config = require('../config');
 let axios = require('axios');
-const Heroku = require('heroku-client');
-
-const heroku = new Heroku({
-    token: Config.HEROKU.API_KEY
-});
-
-let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 var isSpamming = false
 
@@ -25,23 +18,19 @@ if (Config.LANG == 'ID') SPAM_DESC = 'Spam teks yang dimasukkan atau dibalas.', 
 Leon.addCommand({pattern: 'spam ?(.*)', fromMe: true, desc: SPAM_DESC}, (async (message, match) => {
 
     if (match[1] === '' && (message.reply_message === false || message.reply_message.text === false)) return await message.sendReply(SPAM_NEED);
-    isSpamming = true
 
-    setInterval(async () => {
-      var txt = message.reply_message ? message.reply_message.text : match[1]
-      await message.client.sendMessage(message.jid, txt, MessageType.text);
-    }, 1000)
+      isSpamming = setInterval(async () => {
+        var txt = message.reply_message ? message.reply_message.text : match[1]
+        await message.client.sendMessage(message.jid, txt, MessageType.text);
+      }, 1000)
 }));
 
 Leon.addCommand({pattern: 'killspam ?(.*)', fromMe: true, desc: SSPAM_DESC}, (async (message, match) => {
 
-   if (isSpamming) {
+   try {
+     clearInterval(isSpamming);
      await message.sendReply(SPAM_STOPPED);
-     console.log(baseURI);
-         await heroku.delete(baseURI + '/dynos').catch(async (error) => {
-           await message.sendMessage(error.message);
-         });
-   } else {
+   } catch {
     await message.sendReply(NO_SPAM);
    }
 }));

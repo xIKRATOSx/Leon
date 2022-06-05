@@ -15,13 +15,10 @@ if (Config.WORKTYPE == 'private') {
     }));
 
 /*    Leon.addCommand({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL}, (async (message, match) => {
-
          if (match[1] === '') return await message.sendReply(SLang.LİNK);
-
          TinyURL.shorten(`${match[1]}`, async(res, err) => {
            if (err)
              await message.sendReply('*#### Error! ####*\n\n' + '```' + err + '```');
-
              await message.sendReply(`*Original Link:* ${match[1]}\n*Short Link:* ` + res);
          });
     }));*/
@@ -34,13 +31,10 @@ else if (Config.WORKTYPE == 'public') {
     }));
 
 /*    Leon.addCommand({pattern: 'short ?(.*)', fromMe: false, desc: Lang.URL}, (async (message, match) => {
-
          if (match[1] === '') return await message.sendReply(SLang.LİNK);
-
          TinyURL.shorten(`${match[1]}`, async(res, err) => {
            if (err)
              await message.sendReply('*#### Error! ####*\n\n' + '```' + err + '```');
-
              await message.sendReply(`*Original Link:* ${match[1]}\n*Short Link:* ` + res);
          });
     }));*/

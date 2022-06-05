@@ -1,5 +1,4 @@
 let Leon = require('../events');
-let Heroku = require('heroku-client');
 let Config = require('../config');
 let {MessageType} = require('@adiwajshing/baileys');
 let got = require('got');
@@ -8,13 +7,6 @@ let Db = require('./sql/plugin');
 let Language = require('../language');
 let Lang = Language.getString('plugin');
 let NLang = Language.getString('updater');
-
-const heroku = new Heroku({
-    token: Config.HEROKU.API_KEY
-});
-
-
-let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 Leon.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC}, (async (message, match) => {
     if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_URL, MessageType.text, { quoted: message.data });
@@ -79,13 +71,6 @@ Leon.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_D
         delete require.cache[require.resolve('./' + match[1] + '.js')]
         fs.unlinkSync('./plugins/' + match[1] + '.js');
         await message.sendReply(Lang.DELETED);
-        await message.sendReply(NLang.AFTER_UPDATE);
-
-        console.log(baseURI);
-        await heroku.delete(baseURI + '/dynos').catch(async (error) => {
-            await message.sendReply(error.message);
-
-        });
     }
 
 }));
