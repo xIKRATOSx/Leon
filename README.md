@@ -23,11 +23,17 @@ $ pkg install git -y && pkg install nodejs -y && git clone https://github.com/TO
 
 [![Run on Repl.it](https://repl.it/badge/github/TOXIC-DEVIL/WhatsApp-Bot)](https://replit.com/@TOXICDEVIL/Leon)
 
-[![Deploy-Leon](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TOXIC-DEVIL/Leon)
+### Heroku
 
-> [Leon Installation Tutorial](https://youtu.be/eZ3xhIWnuyY)
+[![Deploy-Leon-Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TOXIC-DEVIL/Leon)
+> [Leon Installation Tutorial ( Heroku )](https://youtu.be/eZ3xhIWnuyY)
 
-**Found a bug/glitch in bot? Or wanna feedback us? [`WhatsApp`](https://wa.me/918595651408?text=Hi)**
+### Railway
+
+[![Deploy-Leon-Railway](https://railway.app/button.svg)](https://railway.app/new/template/e9CKXX?referralCode=ToxicDevil)
+> [Leon Installation Tutorial ( Railway )](https://youtu.be/tiOHHhOgNJs)
+
+**Found a bug/glitch in bot? Or wanna feedback us? [`WhatsApp`](https://wa.me/919747867484?text=Hi)**
 
 ## ⚠ Warning ⚠
 
