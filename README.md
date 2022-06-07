@@ -31,7 +31,7 @@ $ pkg install git -y && pkg install nodejs -y && git clone https://github.com/TO
 ### Railway
 
 [![Deploy-Leon-Railway](https://railway.app/button.svg)](https://railway.app/new/template/e9CKXX?referralCode=ToxicDevil)
-> [Leon Installation Tutorial ( Railway )](https://youtu.be/)
+> [Leon Installation Tutorial ( Railway )](https://youtu.be/tiOHHhOgNJs)
 
 **Found a bug/glitch in bot? Or wanna feedback us? [`WhatsApp`](https://wa.me/919747867484?text=Hi)**
 
